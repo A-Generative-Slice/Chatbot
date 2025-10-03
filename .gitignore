@@ -1,0 +1,57 @@
+# Node.js dependencies
+node_modules/
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Log files
+*.log
+message_logs.txt
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build outputs
+dist/
+build/
+
+# Coverage reports
+coverage/
+*.coverage
+
+# Ngrok files
+ngrok.exe
+ngrok.zip
+
+# Sensitive configuration files
+config.json
+secrets.json
+
+# Windows specific
+desktop.ini
