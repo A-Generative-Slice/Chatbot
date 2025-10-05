@@ -234,6 +234,110 @@
         {"id": 226, "name": "500 ML TOILET CLEANER CONTAINER", "mrp": 12},
         {"id": 227, "name": "1 LITRE TOILET CLEANER CONTAINER", "mrp": 18}
       ]
+    },
+    "diy_kits": {
+      "name": "DIY Kits",
+      "products": [
+        {
+          "id": 301, 
+          "name": "FABRIC CONDITIONER KIT", 
+          "mrp": 1100,
+          "description": "Complete kit to prepare 20 liters of premium fabric conditioner",
+          "yield": "20 liters",
+          "cost_per_liter": 55,
+          "knowledge_id": "fabric_conditioner",
+          "tags": ["fabric conditioner", "fabric softener", "comfort", "laundry", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 302,
+          "name": "LIQUID DETERGENT ULTRA KIT",
+          "mrp": 1600,
+          "description": "Premium liquid detergent kit for high-quality washing gel production",
+          "yield": "25 liters",
+          "cost_per_liter": 64,
+          "knowledge_id": "liquid_detergent_ultra",
+          "tags": ["liquid detergent", "washing gel", "ultra", "laundry", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 303,
+          "name": "LIQUID DETERGENT SMART KIT",
+          "mrp": 2000,
+          "description": "Large volume liquid detergent kit for commercial production",
+          "yield": "55 liters",
+          "cost_per_liter": 36,
+          "knowledge_id": "liquid_detergent_smart",
+          "tags": ["liquid detergent", "smart", "commercial", "bulk", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 304,
+          "name": "DISH WASH LIQUID ULTRA KIT",
+          "mrp": 1200,
+          "description": "Professional grade dish wash liquid kit with superior cleaning power",
+          "yield": "23 liters",
+          "cost_per_liter": 52,
+          "knowledge_id": "dish_wash_ultra",
+          "tags": ["dish wash", "liquid", "ultra", "kitchen", "cleaning", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 305,
+          "name": "DISH WASH LIQUID SMART KIT",
+          "mrp": 1800,
+          "description": "Large volume dish wash liquid kit for commercial production",
+          "yield": "55 liters",
+          "cost_per_liter": 33,
+          "knowledge_id": "dish_wash_smart",
+          "tags": ["dish wash", "smart", "commercial", "bulk", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 306,
+          "name": "FLOOR CLEANER ULTRA KIT",
+          "mrp": 1100,
+          "description": "Premium floor cleaner kit with excellent fragrance and cleaning power",
+          "yield": "20 liters",
+          "cost_per_liter": 55,
+          "knowledge_id": "floor_cleaner_ultra",
+          "tags": ["floor cleaner", "ultra", "cleaning", "home", "fragrance", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 307,
+          "name": "FLOOR CLEANER SMART KIT",
+          "mrp": 2000,
+          "description": "Large volume floor cleaner kit for commercial production",
+          "yield": "50 liters",
+          "cost_per_liter": 40,
+          "knowledge_id": "floor_cleaner_smart",
+          "tags": ["floor cleaner", "smart", "commercial", "bulk", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 308,
+          "name": "SOAP OIL KIT",
+          "mrp": 700,
+          "description": "Economical soap oil production kit for large volume manufacturing",
+          "yield": "55 liters",
+          "cost_per_liter": 13,
+          "knowledge_id": "soap_oil",
+          "tags": ["soap oil", "manufacturing", "bulk", "commercial", "DIY"],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 309,
+          "name": "PHENYL COMPOUND KIT",
+          "mrp": 300,
+          "description": "Simple and economical phenyl compound production kit",
+          "yield": "40 liters",
+          "cost_per_liter": 8,
+          "knowledge_id": "phenyl_compound",
+          "tags": ["phenyl", "compound", "disinfectant", "cleaning", "floor", "DIY"],
+          "category": "DIY Kits"
+        }
+      ]
     }
   }
 }

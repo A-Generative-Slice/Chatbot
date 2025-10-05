@@ -18,12 +18,22 @@ app.use((req, res, next) => {
 
 // Load products knowledge base
 let products = {};
+let productsKnowledge = {};
 try {
   const productsData = fs.readFileSync(path.join(__dirname, 'products.json'), 'utf8');
   products = JSON.parse(productsData);
   console.log('✅ Products knowledge base loaded successfully');
 } catch (error) {
   console.error('❌ Error loading products.json:', error);
+}
+
+// Load detailed knowledge base
+try {
+  const knowledgeData = fs.readFileSync(path.join(__dirname, 'products_knowledge_enhanced.json'), 'utf8');
+  productsKnowledge = JSON.parse(knowledgeData);
+  console.log('✅ Enhanced detailed knowledge base loaded successfully');
+} catch (error) {
+  console.error('❌ Error loading products_knowledge_enhanced.json:', error);
 }
 
 // User session storage (in production, use Redis or database)
@@ -218,13 +228,32 @@ function detectIntent(message) {
   const helpKeywords = ['help', 'assist', 'guide', 'support'];
   const thanksKeywords = ['thank', 'thanks', 'appreciate', 'great', 'good', 'nice', 'excellent', 'perfect'];
   
-  // Conversation/Question keywords (NEW)
+  // Conversation/Question keywords
   const questionKeywords = ['does', 'is', 'can', 'will', 'how', 'what', 'which', 'when', 'where', 'why', 
                            'color', 'colour', 'water', 'mix', 'dilute', 'use', 'safe', 'compatible',
+                           'recipe', 'make', 'prepare', 'ingredients', 'steps', 'process',
                            'क्या', 'कैसे', 'कौन', 'कब', 'कहाँ', 'रंग', 'पानी', 'मिला', 'उपयोग'];
+  
+  // Enhanced product terms for better detection
+  const productTerms = [
+    'acid', 'chemical', 'brush', 'cleaner', 'perfume', 'oil', 'powder', 
+    'soap', 'detergent', 'fragrance', 'bottle', 'container', 'solution',
+    'liquid', 'spray', 'cream', 'gel', 'paste', 'thinner', 'solvent',
+    'fabric', 'conditioner', 'softener', 'dish', 'wash', 'floor', 
+    'phenyl', 'compound', 'kit', 'ultra', 'smart'
+  ];
+  
+  // DIY Kit specific terms
+  const diyKitTerms = [
+    'fabric conditioner', 'liquid detergent', 'dish wash', 'floor cleaner',
+    'soap oil', 'phenyl compound', 'washing gel', 'cleaning kit'
+  ];
   
   // Function to check if any keyword exists in message
   const hasKeyword = (keywords) => keywords.some(keyword => msg.includes(keyword));
+  
+  // Check if message contains DIY kit terms
+  const hasDIYKitTerms = diyKitTerms.some(term => msg.includes(term));
   
   // Check if message is in question format
   const isQuestion = msg.includes('?') || 
@@ -238,27 +267,22 @@ function detectIntent(message) {
                     msg.startsWith('does ');
   
   // Check for product indicators
-  const productTerms = [
-    'acid', 'chemical', 'brush', 'cleaner', 'perfume', 'oil', 'powder', 
-    'soap', 'detergent', 'fragrance', 'bottle', 'container', 'solution',
-    'liquid', 'spray', 'cream', 'gel', 'paste', 'thinner', 'solvent'
-  ];
   const hasProductTerms = productTerms.some(term => msg.includes(term));
   
   // Business/shopping terms
   const businessTerms = ['buy', 'purchase', 'order', 'deliver', 'quality', 'brand', 'size', 'quantity'];
   const hasBusinessTerms = businessTerms.some(term => msg.includes(term));
   
-  console.log(`🔍 Analyzing: "${msg}" | Question: ${isQuestion} | ProductTerms: ${hasProductTerms} | BusinessTerms: ${hasBusinessTerms}`);
+  console.log(`🔍 Analyzing: "${msg}" | Question: ${isQuestion} | ProductTerms: ${hasProductTerms} | DIYKits: ${hasDIYKitTerms} | BusinessTerms: ${hasBusinessTerms}`);
   
   // GREETING DETECTION - Most specific first
-  if (hasKeyword(greetingKeywords) && !hasKeyword(searchKeywords) && !hasProductTerms) {
+  if (hasKeyword(greetingKeywords) && !hasKeyword(searchKeywords) && !hasProductTerms && !hasDIYKitTerms) {
     return { intent: 'greeting', entity: null };
   }
   
-  // CONVERSATION/QUESTION DETECTION (NEW)
+  // CONVERSATION/QUESTION DETECTION - Enhanced for recipes
   if (hasKeyword(questionKeywords) || isQuestion) {
-    let entity = extractProductName(msg, questionKeywords.concat(['do', 'you', 'have', 'can', 'what', 'is', 'are', 'the']));
+    let entity = extractProductName(msg, questionKeywords.concat(['do', 'you', 'have', 'can', 'what', 'is', 'are', 'the', 'to']));
     return { intent: 'conversation', entity: entity };
   }
   
@@ -266,6 +290,12 @@ function detectIntent(message) {
   if (hasKeyword(priceKeywords)) {
     let entity = extractProductName(msg, priceKeywords.concat(['what', 'is', 'the', 'of', 'for', 'tell', 'me']));
     return { intent: 'price', entity: entity };
+  }
+  
+  // DIRECT DIY KIT DETECTION - NEW: Handle direct product names
+  if (hasDIYKitTerms) {
+    let entity = msg; // Use the entire message as entity for DIY kits
+    return { intent: 'search', entity: entity };
   }
   
   // SEARCH DETECTION - Very flexible
@@ -296,9 +326,12 @@ function detectIntent(message) {
     return { intent: 'thanks', entity: null };
   }
   
-  // If message is longer than 2 words, likely a search or conversation
-  if (words.length > 2) {
-    return { intent: 'search', entity: msg };
+  // Enhanced fallback logic for product names
+  if (words.length >= 1) {
+    // Check if the message contains any known product terms
+    if (hasProductTerms || words.length === 2) {
+      return { intent: 'search', entity: msg };
+    }
   }
   
   // Single word that might be a product
@@ -336,46 +369,33 @@ function detectCategoryRequest(message) {
   return categoryPatterns.some(pattern => pattern.test(message));
 }
 
-// Function to search for products using AI semantic search with conversation support
+// Function to search for products using enhanced knowledge base
 async function searchProducts(query) {
   try {
-    console.log(`🤖 AI Search for: "${query}"`);
+    console.log(`🔍 Searching for: "${query}"`);
     
-    const response = await fetch('http://localhost:5000/search', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query: query
-      })
-    });
-
-    if (!response.ok) {
-      console.log('⚠️ AI search failed, falling back to basic search');
-      return { type: 'search', results: await fallbackSearch(query) };
-    }
-
-    const data = await response.json();
-    
-    if (data.type === 'conversation') {
-      console.log(`💬 AI conversation response generated`);
+    // First, check the enhanced knowledge base for detailed information
+    const knowledgeResponse = getProductKnowledge(query);
+    if (knowledgeResponse) {
+      console.log(`🧠 Found detailed knowledge for: "${query}"`);
       return {
         type: 'conversation',
-        response: data.response
-      };
-    } else {
-      console.log(`🧠 AI found ${data.results.length} products with semantic matching`);
-      return {
-        type: 'search',
-        results: data.results || []
+        response: knowledgeResponse
       };
     }
     
+    // Fallback to regular product search
+    const results = await fallbackSearch(query);
+    console.log(`📊 Found ${results.length} products in basic search`);
+    
+    return {
+      type: 'search',
+      results: results
+    };
+    
   } catch (error) {
-    console.error('❌ AI search error:', error);
-    console.log('⚠️ Falling back to basic search');
-    return { type: 'search', results: await fallbackSearch(query) };
+    console.error('❌ Search error:', error);
+    return { type: 'search', results: [] };
   }
 }
 
@@ -406,6 +426,248 @@ async function handleConversation(question, productContext = null) {
     console.error('🚫 Conversation service error:', error);
     return getFallbackConversationResponse(question);
   }
+}
+
+// Get detailed product information from knowledge base
+function getProductKnowledge(productName, questionType = null) {
+  try {
+    const productKey = productName.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '_')
+      .replace(/_+/g, '_');
+    
+    // Search in knowledge base
+    for (const [key, product] of Object.entries(productsKnowledge.products_knowledge || {})) {
+      if (key.includes(productKey) || 
+          product.name.toLowerCase().includes(productName.toLowerCase()) ||
+          (product.keywords && product.keywords.some(k => k.includes(productName.toLowerCase())))) {
+        
+        // Return specific information based on question type
+        if (questionType) {
+          return getSpecificKnowledge(product, questionType);
+        }
+        
+        // Return general product info
+        return formatProductKnowledge(product);
+      }
+    }
+    
+    return null;
+  } catch (error) {
+    console.error('Error searching knowledge base:', error);
+    return null;
+  }
+}
+
+// Get specific knowledge based on question type
+function getSpecificKnowledge(product, questionType) {
+  const qt = questionType.toLowerCase();
+  
+  if (qt.includes('recipe') || qt.includes('how to make') || qt.includes('prepare')) {
+    return formatRecipe(product);
+  }
+  
+  if (qt.includes('price') || qt.includes('cost')) {
+    return formatPriceInfo(product);
+  }
+  
+  if (qt.includes('ingredients') || qt.includes('what needed')) {
+    return formatIngredients(product);
+  }
+  
+  if (qt.includes('water') || qt.includes('mix') || qt.includes('ratio')) {
+    return formatMixingInstructions(product);
+  }
+  
+  if (qt.includes('color') || qt.includes('colours')) {
+    return formatColorInfo(product);
+  }
+  
+  if (qt.includes('time') || qt.includes('duration')) {
+    return formatTimeInfo(product);
+  }
+  
+  return formatProductKnowledge(product);
+}
+
+// Format complete recipe
+function formatRecipe(product) {
+  if (!product.recipe) return null;
+  
+  let response = `🧪 **${product.name} Recipe**\n\n`;
+  response += `💰 **Cost**: ₹${product.price.kit_price} (Makes ${product.price.yield})\n`;
+  response += `⏱️ **Time**: ${product.recipe.preparation_time}\n`;
+  response += `📊 **Difficulty**: ${product.recipe.difficulty}\n\n`;
+  
+  response += "📋 **Step-by-step Instructions:**\n\n";
+  
+  product.recipe.steps.forEach(step => {
+    response += `**Step ${step.step}: ${step.title}**\n`;
+    response += `${step.instruction}\n`;
+    if (step.tip) response += `💡 *Tip: ${step.tip}*\n`;
+    response += `⏰ Time: ${step.time}\n\n`;
+  });
+  
+  response += `✅ **Final Result**: ${product.recipe.final_result}\n\n`;
+  response += "❓ Need more details? Ask me about ingredients, equipment, or troubleshooting!";
+  
+  return response;
+}
+
+// Format price information
+function formatPriceInfo(product) {
+  if (!product.price) return null;
+  
+  let response = `💰 **${product.name} - Price Details**\n\n`;
+  response += `🛒 **Kit Price**: ₹${product.price.kit_price}\n`;
+  response += `📦 **Yield**: ${product.price.yield}\n`;
+  response += `💧 **Cost per Liter**: ₹${product.price.cost_per_liter}\n\n`;
+  
+  if (product.business_info) {
+    response += `📈 **Business Info**:\n`;
+    response += `• Profit Margin: ${product.business_info.profit_margin}\n`;
+    response += `• Market Demand: ${product.business_info.market_demand}\n`;
+    response += `• Competition: ${product.business_info.competition}\n\n`;
+  }
+  
+  response += "💡 Great for starting your own fabric conditioner business!";
+  return response;
+}
+
+// Format ingredients
+function formatIngredients(product) {
+  if (!product.ingredients) return null;
+  
+  let response = `🧪 **${product.name} - Required Items**\n\n`;
+  
+  response += "📦 **Ingredients:**\n";
+  product.ingredients.forEach(ing => {
+    const status = ing.included ? "✅" : "❗";
+    response += `${status} ${ing.name} - ${ing.quantity}\n`;
+    if (ing.note) response += `   ℹ️ ${ing.note}\n`;
+  });
+  
+  if (product.equipment_needed) {
+    response += "\n🛠️ **Equipment Needed:**\n";
+    product.equipment_needed.forEach(eq => {
+      const status = eq.included ? "✅" : "❗";
+      response += `${status} ${eq.name}`;
+      if (eq.capacity) response += ` (${eq.capacity})`;
+      if (eq.purpose) response += ` - ${eq.purpose}`;
+      response += "\n";
+    });
+  }
+  
+  response += "\n💡 Items marked with ❗ need to be arranged by you.";
+  return response;
+}
+
+// Format mixing instructions
+function formatMixingInstructions(product) {
+  if (!product.recipe) return null;
+  
+  let response = `💧 **${product.name} - Water & Mixing Guide**\n\n`;
+  
+  // Find water-related steps
+  const waterSteps = product.recipe.steps.filter(step => 
+    step.instruction.toLowerCase().includes('water') || 
+    step.instruction.toLowerCase().includes('mix')
+  );
+  
+  if (waterSteps.length > 0) {
+    response += "🌊 **Water Requirements:**\n";
+    waterSteps.forEach(step => {
+      response += `• **${step.title}**: ${step.instruction}\n`;
+      if (step.tip) response += `  💡 ${step.tip}\n`;
+    });
+  }
+  
+  // Add general water info
+  const waterIngredient = product.ingredients.find(ing => 
+    ing.name.toLowerCase().includes('water')
+  );
+  
+  if (waterIngredient) {
+    response += `\n📊 **Total Water Needed**: ${waterIngredient.quantity}\n`;
+  }
+  
+  response += "\n⚠️ Always use RO (purified) water for best results!";
+  return response;
+}
+
+// Format color information
+function formatColorInfo(product) {
+  if (!product.recipe) return null;
+  
+  let response = `🌈 **${product.name} - Color Information**\n\n`;
+  
+  // Find color-related steps
+  const colorSteps = product.recipe.steps.filter(step => 
+    step.instruction.toLowerCase().includes('color') || 
+    step.instruction.toLowerCase().includes('powder')
+  );
+  
+  if (colorSteps.length > 0) {
+    response += "🎨 **Color Steps:**\n";
+    colorSteps.forEach(step => {
+      response += `• **${step.title}**: ${step.instruction}\n`;
+      if (step.tip) response += `  💡 ${step.tip}\n`;
+    });
+  }
+  
+  // Check for color-related ingredients
+  const colorIngredients = product.ingredients.filter(ing => 
+    ing.name.toLowerCase().includes('color') || 
+    ing.name.toLowerCase().includes('powder')
+  );
+  
+  if (colorIngredients.length > 0) {
+    response += "\n🧪 **Color Ingredients:**\n";
+    colorIngredients.forEach(ing => {
+      response += `• ${ing.name} - ${ing.quantity}\n`;
+      if (ing.note) response += `  ℹ️ ${ing.note}\n`;
+    });
+  }
+  
+  response += "\n🎨 You can choose from various attractive colors for your fabric conditioner!";
+  return response;
+}
+
+// Format time information
+function formatTimeInfo(product) {
+  if (!product.recipe) return null;
+  
+  let response = `⏰ **${product.name} - Time Guide**\n\n`;
+  response += `📊 **Total Preparation Time**: ${product.recipe.preparation_time}\n\n`;
+  
+  response += "⏱️ **Step-by-step Timing:**\n";
+  product.recipe.steps.forEach(step => {
+    response += `• **${step.title}**: ${step.time}\n`;
+  });
+  
+  response += "\n💡 **Important**: Follow timing carefully for best results!";
+  return response;
+}
+
+// Format general product knowledge
+function formatProductKnowledge(product) {
+  let response = `📋 **${product.name}**\n\n`;
+  response += `${product.description}\n\n`;
+  
+  if (product.price) {
+    response += `💰 **Price**: ₹${product.price.kit_price} (Makes ${product.price.yield})\n\n`;
+  }
+  
+  response += "❓ **Ask me about:**\n";
+  response += "• Recipe and instructions\n";
+  response += "• Ingredients needed\n";
+  response += "• Water and mixing ratios\n";
+  response += "• Price and business info\n";
+  response += "• Troubleshooting tips\n\n";
+  
+  response += "💬 Try asking: *How to make fabric conditioner?* or *What ingredients needed?*";
+  
+  return response;
 }
 
 // Fallback conversation responses
@@ -575,6 +837,23 @@ app.get('/whatsapp', (req, res) => {
   res.status(200).send('Webhook verified successfully');
 });
 
+// Test endpoint for knowledge base
+app.get('/test-knowledge', (req, res) => {
+  const query = req.query.q || 'fabric conditioner';
+  const questionType = req.query.type || null;
+  
+  console.log(`🧪 Testing knowledge base with query: "${query}", type: "${questionType}"`);
+  
+  const result = getProductKnowledge(query, questionType);
+  
+  res.json({
+    query: query,
+    questionType: questionType,
+    result: result,
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Test endpoint for webhook validation
 app.get('/webhook-test', (req, res) => {
   const testData = {
@@ -604,11 +883,13 @@ app.post('/whatsapp', async (req, res) => {
       MediaUrl0: mediaUrl
     } = req.body;
 
-    // Log incoming message details
+    // Enhanced logging to debug
     console.log('\n🔵 INCOMING WHATSAPP MESSAGE:');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log(`📱 From: ${senderNumber} (${senderName || 'Unknown'})`);
     console.log(`📱 Message: "${messageBody}"`);
+    console.log(`🕒 Timestamp: ${new Date().toISOString()}`);
+    console.log(`📄 Full Request Body:`, JSON.stringify(req.body, null, 2));
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
     logMessage('incoming', senderNumber, recipientNumber, messageBody, messageId);
@@ -774,29 +1055,37 @@ app.post('/whatsapp', async (req, res) => {
           
         case 'search':
           if (entity) {
-            const searchResult = await searchProducts(entity);
+            // First check knowledge base for detailed information
+            const knowledgeResponse = getProductKnowledge(entity, incomingMessage);
             
-            if (searchResult.type === 'conversation') {
-              // Handle conversation response
-              responseMessage = searchResult.response;
-            } else if (searchResult.results && searchResult.results.length > 0) {
-              // Handle search results
-              const results = searchResult.results;
-              responseMessage = getTranslation(session.language, 'searchResults', {
-                count: results.length,
-                query: entity
-              }) + '\n\n';
-              
-              // Show all results (as requested)
-              results.forEach((product, index) => {
-                responseMessage += `${index + 1}. *${product.name}*\n   💰 ₹${product.mrp} | 📂 ${product.category}\n   🛒 Add: "*Add ${product.name}*"\n\n`;
-              });
-              
-              if (results.length > 10) {
-                responseMessage += `📋 *Showing all ${results.length} results*\n\n💡 *Tip:* Use more specific keywords to narrow your search.`;
-              }
+            if (knowledgeResponse) {
+              responseMessage = knowledgeResponse;
             } else {
-              responseMessage = getTranslation(session.language, 'noResults', { query: entity });
+              // Fallback to regular product search
+              const searchResult = await searchProducts(entity);
+              
+              if (searchResult.type === 'conversation') {
+                // Handle conversation response
+                responseMessage = searchResult.response;
+              } else if (searchResult.results && searchResult.results.length > 0) {
+                // Handle search results
+                const results = searchResult.results;
+                responseMessage = getTranslation(session.language, 'searchResults', {
+                  count: results.length,
+                  query: entity
+                }) + '\n\n';
+                
+                // Show all results (as requested)
+                results.forEach((product, index) => {
+                  responseMessage += `${index + 1}. *${product.name}*\n   💰 ₹${product.mrp} | 📂 ${product.category}\n   🛒 Add: "*Add ${product.name}*"\n\n`;
+                });
+                
+                if (results.length > 10) {
+                  responseMessage += `📋 *Showing all ${results.length} results*\n\n💡 *Tip:* Use more specific keywords to narrow your search.`;
+                }
+              } else {
+                responseMessage = getTranslation(session.language, 'noResults', { query: entity });
+              }
             }
           } else {
             responseMessage = getTranslation(session.language, 'help');
@@ -806,7 +1095,14 @@ app.post('/whatsapp', async (req, res) => {
         case 'conversation':
           // Handle product questions and conversations
           if (entity) {
-            responseMessage = await handleConversation(incomingMessage, entity);
+            // First check knowledge base for detailed information
+            const knowledgeResponse = getProductKnowledge(entity, incomingMessage);
+            
+            if (knowledgeResponse) {
+              responseMessage = knowledgeResponse;
+            } else {
+              responseMessage = await handleConversation(incomingMessage, entity);
+            }
             // Store last searched product for context
             updateUserSession(senderNumber, { lastSearchedProduct: entity });
           } else {
