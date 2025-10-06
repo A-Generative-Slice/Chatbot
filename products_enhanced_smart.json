@@ -1,0 +1,671 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "last_updated": "2024-10-06",
+    "total_products": 20,
+    "description": "Enhanced smart product catalog with AI-friendly structure",
+    "languages_supported": ["english", "tamil", "hindi", "telugu", "kannada", "malayalam"]
+  },
+  
+  "categories": {
+    "ready_to_use_chemicals": {
+      "name": "Ready To Use Cleaning Products",
+      "description": "Pre-made cleaning solutions ready to use immediately",
+      "icon": "🧴",
+      "keywords": ["ready", "instant", "pre-made", "cleaning", "solutions"],
+      "products": [
+        {
+          "id": 58,
+          "name": "LUXELINEN - FABRIC CONDITIONER",
+          "mrp": 80,
+          "description": "Premium fabric conditioner for ultra-soft, fresh-smelling clothes",
+          "short_description": "Makes clothes soft and fragrant",
+          "keywords": [
+            "fabric conditioner",
+            "fabric softener",
+            "clothes softener",
+            "comfort",
+            "softener",
+            "laundry conditioner",
+            "fabric fresh",
+            "soft clothes",
+            "luxe linen",
+            "fabrik softner",
+            "cloth softener"
+          ],
+          "alternate_names": ["Luxe Linen", "Lux Linen", "Fabric softner", "Cloth softener"],
+          "uses": [
+            "Softens clothes after washing",
+            "Adds long-lasting fragrance to laundry",
+            "Reduces static cling in clothes",
+            "Makes ironing easier",
+            "Protects fabric fibers"
+          ],
+          "benefits": [
+            "Luxury hotel-like softness",
+            "Fresh scent lasts for days",
+            "Reduces wrinkles naturally",
+            "Gentle on sensitive skin",
+            "Works in machine and hand wash"
+          ],
+          "how_to_use": [
+            "Washing machine: Add 30ml (1 cap) to rinse cycle",
+            "Hand wash: Add 1 cap to 5 liters of water during final rinse",
+            "Do not pour directly on clothes"
+          ],
+          "best_for": ["Cotton clothes", "Bed sheets", "Towels", "Baby clothes", "Daily wear"],
+          "not_recommended_for": ["Waterproof fabrics", "Sportswear with moisture-wicking"],
+          "business_info": {
+            "cost_price": 60,
+            "profit_margin": "25%",
+            "min_order": "1 bottle",
+            "stock_status": "in_stock",
+            "popularity": "very_high",
+            "monthly_sales": 450
+          },
+          "related_products": [59, 60, 70],
+          "frequently_bought_with": [59, 67],
+          "search_metadata": {
+            "popularity_score": 95,
+            "search_boost": 1.5,
+            "trending": true,
+            "featured": true
+          },
+          "common_questions": [
+            {
+              "question": "How much should I use?",
+              "answer": "Use 30ml (1 cap) for one washing machine load. For hand wash, use 1 cap in 5 liters of water."
+            },
+            {
+              "question": "Is it safe for baby clothes?",
+              "answer": "Yes! Completely safe for baby clothes and suitable for sensitive skin."
+            },
+            {
+              "question": "Does it work with hand wash?",
+              "answer": "Absolutely! Add 1 cap to 5 liters of water during the final rinse."
+            }
+          ],
+          "translations": {
+            "tamil": {
+              "name": "லக்ஸ்லினன் - துணி மென்மையாக்கி",
+              "description": "உயர்தர துணி மென்மையாக்கி - துணிகளை மிக மென்மையாகவும் நறுமணமாகவும் மாற்றும்",
+              "uses": ["துணிகளை மென்மையாக்கும்", "நீண்ட நேரம் நறுமணம் தரும்", "சுருக்கங்களை குறைக்கும்"]
+            },
+            "hindi": {
+              "name": "लक्सलिनेन - फैब्रिक कंडीशनर",
+              "description": "प्रीमियम फैब्रिक कंडीशनर - कपड़ों को अत्यंत मुलायम और सुगंधित बनाता है",
+              "uses": ["कपड़े नरम करता है", "लंबे समय तक खुशबू देता है", "झुर्रियां कम करता है"]
+            }
+          }
+        },
+        {
+          "id": 59,
+          "name": "SILKYSHINE - ULTRA - LIQUID DETERGENT",
+          "mrp": 80,
+          "description": "Ultra-concentrated liquid detergent for brilliant cleaning and shine",
+          "short_description": "Premium liquid detergent with shine enhancer",
+          "keywords": [
+            "liquid detergent",
+            "washing liquid",
+            "laundry liquid",
+            "washing gel",
+            "detergent liquid",
+            "silky shine",
+            "ultra detergent",
+            "washing soap liquid",
+            "cloth washing",
+            "liqued detergent",
+            "detergant"
+          ],
+          "alternate_names": ["Silky Shine", "Silki Shine", "Liquid detergant", "Washing gel"],
+          "uses": [
+            "Machine washing - front and top load",
+            "Hand washing clothes",
+            "Removes tough stains effectively",
+            "Safe for all fabric types",
+            "Gentle on colors"
+          ],
+          "benefits": [
+            "Ultra-concentrated - use less, save more",
+            "Deep cleaning action",
+            "Maintains fabric brightness",
+            "Pleasant fresh fragrance",
+            "Dissolves quickly in water"
+          ],
+          "how_to_use": [
+            "Machine wash: 40ml for medium load, 60ml for heavy load",
+            "Hand wash: 20ml for 5 liters of water",
+            "For tough stains: Apply directly and wait 5 minutes before washing"
+          ],
+          "best_for": ["Daily clothes", "Whites", "Colored fabrics", "Delicate materials"],
+          "business_info": {
+            "cost_price": 64,
+            "profit_margin": "20%",
+            "stock_status": "in_stock",
+            "popularity": "high"
+          },
+          "related_products": [58, 60, 70],
+          "frequently_bought_with": [58],
+          "search_metadata": {
+            "popularity_score": 92,
+            "search_boost": 1.4
+          },
+          "common_questions": [
+            {
+              "question": "What's the difference between Ultra and Smart?",
+              "answer": "Ultra is our premium formula with higher concentration and better stain removal. Smart is economical but still very effective."
+            },
+            {
+              "question": "Can I use it for whites?",
+              "answer": "Yes! It's excellent for whites and maintains brightness without yellowing."
+            }
+          ]
+        },
+        {
+          "id": 61,
+          "name": "GLEAM DROP - ULTRA - DISH WASH",
+          "mrp": 80,
+          "description": "Ultra-powerful dishwashing liquid that cuts through grease instantly",
+          "short_description": "Premium dish wash with superior grease-cutting power",
+          "keywords": [
+            "dish wash",
+            "dishwashing liquid",
+            "utensil cleaner",
+            "dish soap",
+            "dishwash liquid",
+            "vessel cleaning",
+            "plate cleaner",
+            "gleam drop",
+            "dish detergent",
+            "bartan liquid",
+            "deshwash",
+            "dishwosh"
+          ],
+          "alternate_names": ["Gleamdrop", "Dish washing liquid", "Vessel wash", "Bartan soap"],
+          "uses": [
+            "Cleans all types of dishes and utensils",
+            "Removes tough grease from pots and pans",
+            "Cleans glassware without streaks",
+            "Effective on dried food stains",
+            "Safe for non-stick cookware"
+          ],
+          "benefits": [
+            "Ultra-concentrated formula - lasts longer",
+            "Pleasant lime fragrance",
+            "Gentle on hands",
+            "Removes 99% of grease in one wash",
+            "Safe for all utensil types"
+          ],
+          "how_to_use": [
+            "Add 5-10ml to sink full of water",
+            "For tough grease: Apply directly on utensil, wait 2 minutes, then scrub",
+            "Rinse thoroughly with clean water"
+          ],
+          "best_for": ["Greasy pots", "Burnt pans", "Daily dishes", "Glassware", "Non-stick cookware"],
+          "not_recommended_for": ["Use with hot water above 60°C may reduce fragrance"],
+          "business_info": {
+            "cost_price": 64,
+            "profit_margin": "20%",
+            "stock_status": "in_stock",
+            "popularity": "very_high",
+            "monthly_sales": 520
+          },
+          "related_products": [62, 97, 99],
+          "frequently_bought_with": [91, 108],
+          "search_metadata": {
+            "popularity_score": 96,
+            "search_boost": 1.6,
+            "trending": true
+          },
+          "common_questions": [
+            {
+              "question": "Is it safe for hands?",
+              "answer": "Yes, it's gentle on hands. However, we recommend gloves for prolonged use or if you have sensitive skin."
+            },
+            {
+              "question": "How much should I use?",
+              "answer": "Just 5-10ml (about 1-2 drops) is enough for a full sink of dishes. It's very concentrated!"
+            },
+            {
+              "question": "Does it work on burnt vessels?",
+              "answer": "Yes! Apply directly on burnt area, let it sit for 5 minutes, then scrub. Works like magic!"
+            }
+          ],
+          "translations": {
+            "tamil": {
+              "name": "க்ளீம் டிராப் - அல்ட்ரா - பாத்திரம் கழுவும் திரவம்",
+              "description": "அதி சக்தி வாய்ந்த பாத்திரம் கழுவும் திரவம் - கொழுப்பை உடனடியாக நீக்கும்"
+            },
+            "hindi": {
+              "name": "ग्लीम ड्रॉप - अल्ट्रा - डिश वॉश",
+              "description": "अति शक्तिशाली बर्तन धोने का लिक्विड - तुरंत चिकनाई हटाता है"
+            }
+          }
+        },
+        {
+          "id": 67,
+          "name": "MOP FRESH - ULTRA - FLOOR CLEANER",
+          "mrp": 80,
+          "description": "Ultra-powerful floor cleaning solution for all floor types",
+          "short_description": "Premium floor cleaner with long-lasting freshness",
+          "keywords": [
+            "floor cleaner",
+            "floor wash",
+            "mopping liquid",
+            "floor cleaning solution",
+            "mop solution",
+            "phenyl",
+            "floor disinfectant",
+            "floor soap",
+            "mop fresh",
+            "flor cleanr",
+            "flore cleaner",
+            "floor clener"
+          ],
+          "alternate_names": ["Mopfresh", "Floor cleaning liquid", "Phenyl", "Floor wash"],
+          "uses": [
+            "All types of floors - tiles, marble, granite, ceramic",
+            "Removes dirt and stains effectively",
+            "Disinfects and kills 99.9% germs",
+            "Leaves pleasant fresh fragrance",
+            "Safe for daily use"
+          ],
+          "benefits": [
+            "Ultra-concentrated - covers more area",
+            "Long-lasting fresh scent",
+            "No sticky residue",
+            "Fast drying",
+            "Pet-safe when dried"
+          ],
+          "how_to_use": [
+            "Mix 50ml (2 caps) in 5 liters of water",
+            "Mop floor with solution",
+            "No need to rinse - let it dry naturally",
+            "For tough stains: Use undiluted and scrub"
+          ],
+          "best_for": ["Kitchen floors", "Bathroom tiles", "Living room", "Marble floors", "Daily cleaning"],
+          "business_info": {
+            "cost_price": 64,
+            "profit_margin": "20%",
+            "stock_status": "in_stock",
+            "popularity": "very_high",
+            "monthly_sales": 480
+          },
+          "related_products": [68, 71, 72, 73, 74],
+          "frequently_bought_with": [149, 150, 126, 127],
+          "search_metadata": {
+            "popularity_score": 94,
+            "search_boost": 1.5,
+            "trending": true
+          },
+          "common_questions": [
+            {
+              "question": "Can I use it on marble floors?",
+              "answer": "Yes! It's safe for marble, granite, tiles, ceramic - all floor types."
+            },
+            {
+              "question": "Does it kill germs?",
+              "answer": "Yes, it disinfects and kills 99.9% of germs and bacteria."
+            },
+            {
+              "question": "Will it leave my floor sticky?",
+              "answer": "No! It leaves no sticky residue. Your floors will be clean and dry."
+            }
+          ],
+          "translations": {
+            "tamil": {
+              "name": "மாப் ஃப்ரெஷ் - அல்ட்ரா - தரை சுத்தம் செய்யும் திரவம்",
+              "description": "மிக சக்தி வாய்ந்த தரை சுத்தம் செய்யும் திரவம் - அனைத்து வகை தரைகளுக்கும்"
+            },
+            "hindi": {
+              "name": "मॉप फ्रेश - अल्ट्रा - फ्लोर क्लीनर",
+              "description": "अति शक्तिशाली फर्श सफाई समाधान - सभी प्रकार के फर्श के लिए"
+            }
+          }
+        },
+        {
+          "id": 63,
+          "name": "SHINE BOWL - TOILET BOWL CLEANER",
+          "mrp": 60,
+          "description": "Powerful toilet bowl cleaner that removes stains and kills germs",
+          "short_description": "Effective toilet cleaner with disinfectant",
+          "keywords": [
+            "toilet cleaner",
+            "toilet bowl cleaner",
+            "bathroom cleaner",
+            "wc cleaner",
+            "commode cleaner",
+            "toilet disinfectant",
+            "toilet gel",
+            "shine bowl",
+            "tolet cleaner",
+            "harpic alternative"
+          ],
+          "alternate_names": ["Shine bowl", "Toilet bowl", "WC cleaner", "Bathroom cleaner"],
+          "uses": [
+            "Cleans and disinfects toilet bowls",
+            "Removes tough stains and limescale",
+            "Kills 99.9% germs and bacteria",
+            "Eliminates bad odor",
+            "Prevents future stain buildup"
+          ],
+          "benefits": [
+            "Thick gel formula - clings to bowl",
+            "Fresh fragrance",
+            "Works in hard water",
+            "Safe for septic tanks",
+            "No harsh fumes"
+          ],
+          "how_to_use": [
+            "Apply around toilet bowl rim",
+            "Let it sit for 10-15 minutes",
+            "Scrub with toilet brush",
+            "Flush to rinse"
+          ],
+          "best_for": ["Toilet bowls", "Commodes", "Urinals"],
+          "business_info": {
+            "cost_price": 45,
+            "profit_margin": "25%",
+            "stock_status": "in_stock",
+            "popularity": "high"
+          },
+          "related_products": [67, 79],
+          "search_metadata": {
+            "popularity_score": 88,
+            "search_boost": 1.3
+          }
+        },
+        {
+          "id": 64,
+          "name": "DEEP ZAP - STAIN REMOVER",
+          "mrp": 60,
+          "description": "Powerful stain remover for tough stains on clothes and fabrics",
+          "short_description": "Removes tough stains instantly",
+          "keywords": [
+            "stain remover",
+            "stain cleaner",
+            "clothes stain remover",
+            "fabric stain remover",
+            "spot cleaner",
+            "deep zap",
+            "stain spray",
+            "vanish alternative",
+            "stane remover"
+          ],
+          "uses": [
+            "Removes tough stains from clothes",
+            "Works on ink, blood, food stains",
+            "Safe for colored and white fabrics",
+            "Can be used before washing"
+          ],
+          "benefits": [
+            "Instant stain removal",
+            "No bleach damage",
+            "Works on old stains too",
+            "Safe for most fabrics"
+          ],
+          "how_to_use": [
+            "Apply directly on stain",
+            "Wait 5-10 minutes",
+            "Wash normally with detergent"
+          ],
+          "business_info": {
+            "cost_price": 45,
+            "profit_margin": "25%",
+            "stock_status": "in_stock"
+          },
+          "related_products": [59, 60, 70],
+          "search_metadata": {
+            "popularity_score": 85,
+            "search_boost": 1.2
+          }
+        }
+      ]
+    },
+    
+    "chemical_raw_materials": {
+      "name": "Chemical Raw Materials",
+      "description": "Essential raw materials for manufacturing cleaning products",
+      "icon": "🧪",
+      "keywords": ["chemicals", "raw materials", "ingredients", "manufacturing", "DIY"],
+      "products": [
+        {
+          "id": 1,
+          "name": "ACETIC ACID - KG",
+          "mrp": 170,
+          "description": "High-quality acetic acid for cleaning product manufacturing",
+          "keywords": [
+            "acetic acid",
+            "vinegar acid",
+            "cleaning acid",
+            "pH adjuster",
+            "descaler",
+            "ethanoic acid",
+            "acitic acid"
+          ],
+          "alternate_names": ["Vinegar acid", "Ethanoic acid", "CH3COOH"],
+          "uses": [
+            "Floor cleaner formulation",
+            "Glass cleaning solutions",
+            "Descaling agents",
+            "pH balancing in formulations",
+            "Toilet bowl cleaner manufacturing"
+          ],
+          "benefits": [
+            "High purity - 99%",
+            "Effective descaler",
+            "Natural alternative to harsh acids",
+            "Cost-effective"
+          ],
+          "properties": {
+            "concentration": "99%",
+            "form": "Liquid",
+            "color": "Clear",
+            "odor": "Pungent vinegar smell"
+          },
+          "safety": {
+            "warning": "Corrosive - Handle with care",
+            "precautions": ["Use gloves", "Avoid skin contact", "Store in cool place", "Keep away from children"]
+          },
+          "business_info": {
+            "cost_price": 140,
+            "profit_margin": "18%",
+            "min_order": "1 KG",
+            "bulk_discount": "5% for 10+ KG",
+            "stock_status": "in_stock"
+          },
+          "related_products": [2, 7, 8],
+          "search_metadata": {
+            "popularity_score": 75,
+            "search_boost": 1.0
+          },
+          "common_questions": [
+            {
+              "question": "What can I make with acetic acid?",
+              "answer": "You can make floor cleaners, glass cleaners, toilet bowl cleaners, and descaling solutions."
+            },
+            {
+              "question": "Is it safe to handle?",
+              "answer": "It's corrosive, so always wear gloves and avoid skin contact. Handle with care."
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "LABSA (SLURRY) - ACID SLURRY",
+          "mrp": 180,
+          "description": "Linear Alkyl Benzene Sulfonic Acid - Essential surfactant for detergent manufacturing",
+          "keywords": [
+            "labsa",
+            "acid slurry",
+            "detergent raw material",
+            "surfactant",
+            "cleaning agent",
+            "labsa slurry",
+            "detergent acid"
+          ],
+          "uses": [
+            "Main ingredient in liquid detergents",
+            "Dishwashing liquid formulation",
+            "Floor cleaner production",
+            "Car wash liquid manufacturing",
+            "Industrial cleaning solutions"
+          ],
+          "benefits": [
+            "Excellent foaming properties",
+            "Superior cleaning power",
+            "Cost-effective formulation",
+            "Works in hard water"
+          ],
+          "properties": {
+            "form": "Thick liquid/slurry",
+            "color": "Brown",
+            "active_content": "96%"
+          },
+          "business_info": {
+            "cost_price": 150,
+            "profit_margin": "17%",
+            "min_order": "5 KG",
+            "stock_status": "in_stock",
+            "popularity": "very_high"
+          },
+          "related_products": [8, 9, 10],
+          "search_metadata": {
+            "popularity_score": 90,
+            "search_boost": 1.4
+          }
+        },
+        {
+          "id": 8,
+          "name": "SLES PASTE - 70%",
+          "mrp": 185,
+          "description": "Sodium Lauryl Ether Sulfate - Premium surfactant for gentle cleaning products",
+          "keywords": [
+            "sles",
+            "sles paste",
+            "surfactant",
+            "foaming agent",
+            "detergent ingredient",
+            "sodium lauryl",
+            "sles 70"
+          ],
+          "uses": [
+            "Shampoo manufacturing",
+            "Body wash formulation",
+            "Hand wash liquid production",
+            "Dishwashing liquid",
+            "Gentle cleaning products"
+          ],
+          "benefits": [
+            "Excellent foaming",
+            "Gentle on skin",
+            "Biodegradable",
+            "Better than SLS"
+          ],
+          "business_info": {
+            "cost_price": 155,
+            "profit_margin": "16%",
+            "stock_status": "in_stock",
+            "popularity": "very_high"
+          },
+          "related_products": [7, 10, 14],
+          "search_metadata": {
+            "popularity_score": 88,
+            "search_boost": 1.3
+          }
+        }
+      ]
+    },
+    
+    "cleaning_accessories": {
+      "name": "Cleaning Accessories & Tools",
+      "description": "Essential tools and accessories for effective cleaning",
+      "icon": "🧹",
+      "keywords": ["cleaning tools", "mop", "wiper", "brush", "accessories"],
+      "products": [
+        {
+          "id": 149,
+          "name": "ALFA FLOOR WIPER 21 INCH",
+          "mrp": 113,
+          "description": "Heavy-duty 21-inch floor wiper for large area cleaning",
+          "keywords": [
+            "floor wiper",
+            "wiper",
+            "floor squeegee",
+            "water wiper",
+            "floor cleaning tool",
+            "21 inch wiper",
+            "alfa wiper",
+            "wipor"
+          ],
+          "uses": [
+            "Quick water removal from floors",
+            "Large area cleaning",
+            "After mopping water removal",
+            "Bathroom floor drying",
+            "Commercial cleaning"
+          ],
+          "benefits": [
+            "21-inch wide blade - covers more area",
+            "Durable rubber blade",
+            "Strong handle - won't break",
+            "Lasts for years"
+          ],
+          "best_for": ["Large halls", "Commercial spaces", "Shops", "Hospitals"],
+          "business_info": {
+            "cost_price": 90,
+            "profit_margin": "20%",
+            "stock_status": "in_stock",
+            "popularity": "high"
+          },
+          "related_products": [150, 151, 126, 127],
+          "frequently_bought_with": [67, 68],
+          "search_metadata": {
+            "popularity_score": 87,
+            "search_boost": 1.2
+          }
+        },
+        {
+          "id": 126,
+          "name": "NORMAL WOOLED DRY MOP SET 24 INCH",
+          "mrp": 192,
+          "description": "Complete 24-inch dry mop set for dust-free floor cleaning",
+          "keywords": [
+            "dry mop",
+            "dust mop",
+            "floor mop",
+            "24 inch mop",
+            "dry cleaning mop",
+            "wool mop",
+            "mop set",
+            "mop stick"
+          ],
+          "uses": [
+            "Dry dusting of floors",
+            "Daily floor maintenance",
+            "Picks up dust and hair",
+            "No water needed",
+            "Quick cleaning"
+          ],
+          "benefits": [
+            "24-inch wide coverage",
+            "Complete set with handle",
+            "Washable and reusable",
+            "No water, no mess"
+          ],
+          "best_for": ["Daily cleaning", "Wooden floors", "Marble floors", "Quick dusting"],
+          "business_info": {
+            "cost_price": 155,
+            "profit_margin": "19%",
+            "stock_status": "in_stock"
+          },
+          "related_products": [127, 128, 129],
+          "search_metadata": {
+            "popularity_score": 82,
+            "search_boost": 1.1
+          }
+        }
+      ]
+    }
+  }
+}

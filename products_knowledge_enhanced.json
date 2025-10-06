@@ -1,0 +1,1031 @@
+{
+  "products_knowledge": {
+    "fabric_conditioner": {
+      "id": "KIT001",
+      "name": "Fabric Conditioner Kit",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 1100,
+        "currency": "INR",
+        "yield": "20 liters",
+        "cost_per_liter": 55
+      },
+      "description": "Complete kit to prepare premium fabric conditioner similar to Comfort brand with excellent fragrance",
+      "ingredients": [
+        {
+          "name": "Fabric Conditioner Kit",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "30 liter large bucket",
+          "quantity": "1 piece",
+          "included": false,
+          "note": "Customer needs to arrange"
+        },
+        {
+          "name": "Plastic stick",
+          "quantity": "1 piece",
+          "included": false,
+          "note": "For mixing"
+        },
+        {
+          "name": "RO water",
+          "quantity": "20 liters",
+          "included": false,
+          "note": "Customer needs to arrange"
+        }
+      ],
+      "recipe": {
+        "preparation_time": "6+ hours",
+        "difficulty": "Easy",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Initial Water Mix",
+            "instruction": "Pour 10 liters of RO water in the large bucket. Pour 'Fabric Softener' into it and mix it well using a plastic stick",
+            "time": "5 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Rest Period",
+            "instruction": "Leave it for 6 hours after mixing well. (You can mix it once every 1 hour)",
+            "time": "6 hours"
+          },
+          {
+            "step": 3,
+            "title": "Add Remaining Water",
+            "instruction": "After 6 hours, it will now turn into a 'paste'. Pour the remaining 10 liters of RO water into it",
+            "time": "2 minutes"
+          },
+          {
+            "step": 4,
+            "title": "Dissolve the Paste",
+            "instruction": "Use a plastic stick and mix it for a while until it dissolves well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 5,
+            "title": "Prepare Color Mix",
+            "instruction": "Mix the 'color powder' with 1/4 liter of RO water",
+            "time": "2 minutes"
+          },
+          {
+            "step": 6,
+            "title": "Add Scent",
+            "instruction": "Pour 'SCENT' into the mixture and mix it well",
+            "time": "3 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Add Color Gradually",
+            "instruction": "Pour the mixed 'color powder' solution (1/4 liter of water) into the main mixture little by little in the amount needed, while mixing it",
+            "time": "5 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Final Product",
+            "instruction": "The 'Fabric Conditioner' (Like Comfort) that gives a good fragrance is now ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "20 liters of premium fabric conditioner with excellent fragrance"
+      },
+      "video_url": "https://youtu.be/8KpZpEaswdQ?si=2POkTMI9THRpZZ6",
+      "keywords": ["fabric", "conditioner", "comfort", "softener", "clothes", "fragrance"],
+      "business_info": {
+        "profit_margin": "High - 300%+",
+        "market_demand": "Very High",
+        "competition": "Medium"
+      }
+    },
+    "liquid_detergent_ultra": {
+      "id": "KIT002",
+      "name": "Liquid Detergent 'ULTRA' (Washing Gel Liquid 'Ultra')",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 1600,
+        "currency": "INR",
+        "yield": "25 liters",
+        "cost_per_liter": 64
+      },
+      "description": "Premium liquid detergent kit for high-quality washing gel production",
+      "ingredients": [
+        {
+          "name": "Washing Gel Kit (Ultra)",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "30 liter large bucket",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "5 liter small bucket",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "20 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "8+ hours",
+        "difficulty": "Medium",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Prepare Water Buckets",
+            "instruction": "Pour 2 liters of RO water into the large bucket, and then another 2 liters of water into the small bucket",
+            "time": "2 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Mix Caustic Solution",
+            "instruction": "In the small bucket (2 liters of water), stand back, pour 'caustic' and stir for a while until it dissolves using only a plastic stick",
+            "time": "5 minutes",
+            "warning": "Handle caustic with extreme care"
+          },
+          {
+            "step": 3,
+            "title": "Add Auxiliaries",
+            "instruction": "Pour the 2 'auxiliaries' from the 2-liter can into the large bucket (2 liters of water) and stir for a while",
+            "time": "3 minutes"
+          },
+          {
+            "step": 4,
+            "title": "First Rest Period",
+            "instruction": "Leave both buckets as they are for 3 hours",
+            "time": "3 hours"
+          },
+          {
+            "step": 5,
+            "title": "Combine Solutions",
+            "instruction": "After 3 hours, pour the 'Caustic Clay' mixed in the small bucket into the large bucket (containing the auxiliaries and water), little by little, and keep mixing it well with a plastic stick",
+            "time": "10 minutes"
+          },
+          {
+            "step": 6,
+            "title": "Add SLES Paste",
+            "instruction": "Mix the 'SLES paste' into the large bucket and mix it well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Add CAPP",
+            "instruction": "Pour the 'CAPP' in the 1 liter can into it and mix it well. It will now turn into a paste",
+            "time": "5 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Add Scent",
+            "instruction": "Pour the 'Scent' from the small bottle little by little and mix it well. Keep mixing it well for 10 minutes",
+            "time": "10 minutes"
+          },
+          {
+            "step": 9,
+            "title": "Add Remaining Water",
+            "instruction": "Pour the remaining 16 liters of water and keep mixing it",
+            "time": "5 minutes"
+          },
+          {
+            "step": 10,
+            "title": "Add G-Sald Powder",
+            "instruction": "Pour the 'G-Sald Powder' little by little and mix it for a while. You will feel it becoming a good consistency",
+            "time": "8 minutes"
+          },
+          {
+            "step": 11,
+            "title": "Add Color",
+            "instruction": "Mix the 'Color Powder' with 1/2 liter of water, pour it little by little, and keep mixing for a while",
+            "time": "5 minutes"
+          },
+          {
+            "step": 12,
+            "title": "Second Rest Period",
+            "instruction": "Keep it in a safe place for 6 hours",
+            "time": "6 hours"
+          },
+          {
+            "step": 13,
+            "title": "Final Product",
+            "instruction": "After 8 hours, a good thick and clear 'Washing Gel Liquid' is ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "25 liters of premium liquid detergent"
+      },
+      "video_url": "https://youtu.be/JuUq62z6iV8?si=lKfjoPETHYoFdKDt",
+      "keywords": ["liquid", "detergent", "washing", "gel", "ultra", "clothes"],
+      "business_info": {
+        "profit_margin": "High - 250%+",
+        "market_demand": "Very High",
+        "competition": "High"
+      }
+    },
+    "liquid_detergent_smart": {
+      "id": "KIT003",
+      "name": "Liquid Detergent Smart",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 2000,
+        "currency": "INR",
+        "yield": "55 liters",
+        "cost_per_liter": 36
+      },
+      "description": "Large volume liquid detergent kit for commercial production",
+      "ingredients": [
+        {
+          "name": "Liquid Detergent Smart Kit",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "100 liter large barrel",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Large plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "50 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "2+ hours",
+        "difficulty": "Easy",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Add Base Paste",
+            "instruction": "Put the 'paste' from the 'Liquid Detergent Smart' kit into a 100 liter barrel",
+            "time": "2 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Add Additives",
+            "instruction": "Add 'Scent' and 'Thickener Powder' to the paste and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 3,
+            "title": "Add Thickener Liquid",
+            "instruction": "Pour 'Thickener Liquid' into it and mix well",
+            "time": "3 minutes"
+          },
+          {
+            "step": 4,
+            "title": "First Water Addition",
+            "instruction": "Pour 10 liters of RO water into it and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 5,
+            "title": "Second Water Addition",
+            "instruction": "Pour 10 liters of RO water again and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 6,
+            "title": "Final Water Addition",
+            "instruction": "Pour the remaining 30 liters of RO water into it and mix well",
+            "time": "10 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Foam Settlement",
+            "instruction": "The liquid in the barrel will be full of foam. Wait for the foam to settle",
+            "time": "30 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Add Color",
+            "instruction": "Mix the 'Color Powder' with RO water, then pour it in little by little and mix it",
+            "time": "5 minutes"
+          },
+          {
+            "step": 9,
+            "title": "Add Salt for Thickness",
+            "instruction": "Add the 'Salt' from the 'Liquid Detergent SMART' Kit and mix it until it dissolves well. It will become thick in a while",
+            "time": "10 minutes"
+          },
+          {
+            "step": 10,
+            "title": "Final Product",
+            "instruction": "The 55 liters of 'Liquid Detergent SMART' is now ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "55 liters of premium liquid detergent"
+      },
+      "video_url": "Coming Soon",
+      "keywords": ["liquid", "detergent", "smart", "washing", "commercial", "bulk"],
+      "business_info": {
+        "profit_margin": "Very High - 400%+",
+        "market_demand": "High",
+        "competition": "Medium"
+      }
+    },
+    "dish_wash_ultra": {
+      "id": "KIT004",
+      "name": "Dish Wash Liquid Ultra",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 1200,
+        "currency": "INR",
+        "yield": "23 liters",
+        "cost_per_liter": 52
+      },
+      "description": "Professional grade dish wash liquid kit with superior cleaning power",
+      "ingredients": [
+        {
+          "name": "Dish Wash Liquid Kit (Ultra)",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "30 liter large bucket",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "5 liter small bucket",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "20 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "12+ hours",
+        "difficulty": "Medium",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Prepare Small Bucket",
+            "instruction": "Pour 2 liters of RO water in a small bucket",
+            "time": "1 minute"
+          },
+          {
+            "step": 2,
+            "title": "Prepare Large Bucket",
+            "instruction": "Pour 4 liters of water in a large bucket",
+            "time": "1 minute"
+          },
+          {
+            "step": 3,
+            "title": "Mix Caustic (Careful!)",
+            "instruction": "Add the 'caustic powder' from the kit to the small bucket (safely, as it is powerful) and mix well for some time using a plastic stick",
+            "time": "5 minutes",
+            "warning": "Handle with extreme care - caustic is dangerous"
+          },
+          {
+            "step": 4,
+            "title": "Add Acid Slurry",
+            "instruction": "In the large bucket (with 4 liters of RO water), pour 2 liters of 'Asis Sileri' (Acid Slurry) from the can and mix it",
+            "time": "3 minutes"
+          },
+          {
+            "step": 5,
+            "title": "Cool Down Period",
+            "instruction": "Keep both the buckets aside for 3 hours (wait until the hot solution reaches normal temperature)",
+            "time": "3 hours"
+          },
+          {
+            "step": 6,
+            "title": "Combine Solutions",
+            "instruction": "After 3 hours, pour the 'caustic lye' (caustic powder mixture) from the small bucket into the large bucket and mix it well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Second Rest Period",
+            "instruction": "Leave the large bucket as it is for 3 more hours",
+            "time": "3 hours"
+          },
+          {
+            "step": 8,
+            "title": "Add SLES Paste",
+            "instruction": "After 3 hours, add the 'SLES paste' and mix it well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 9,
+            "title": "Add CDA",
+            "instruction": "Pour the 'CDA' from the kit into it and mix it well",
+            "time": "3 minutes"
+          },
+          {
+            "step": 10,
+            "title": "Add Scent",
+            "instruction": "Pour the 'Scent' into it and mix it well",
+            "time": "3 minutes"
+          },
+          {
+            "step": 11,
+            "title": "Add Remaining Water",
+            "instruction": "Pour the remaining 14 liters of RO water in it and mix it well for a while",
+            "time": "5 minutes"
+          },
+          {
+            "step": 12,
+            "title": "Add Citric Powder",
+            "instruction": "Add the 'Citric Powder' little by little and mix it well for a while",
+            "time": "5 minutes"
+          },
+          {
+            "step": 13,
+            "title": "Add Thickener",
+            "instruction": "Add the 'Thickener Powder' little by little and mix it well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 14,
+            "title": "Foam Settlement",
+            "instruction": "Leave it for 6 hours until the foam has settled",
+            "time": "6 hours"
+          },
+          {
+            "step": 15,
+            "title": "Add Color",
+            "instruction": "After 6 hours, mix the 'color powder' with a little RO water (1/4 liter). Then pour the required amount of color into the big bucket, little by little, and mix it well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 16,
+            "title": "Final Product",
+            "instruction": "The 'Dish Wash Liquid Ultra' is now ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "23 liters of premium dish wash liquid"
+      },
+      "video_url": "https://youtu.be/pPmxwAn8QtQ?si=KMJG-cmM9N9csElB",
+      "keywords": ["dish", "wash", "liquid", "ultra", "cleaning", "kitchen"],
+      "business_info": {
+        "profit_margin": "High - 300%+",
+        "market_demand": "Very High",
+        "competition": "High"
+      }
+    },
+    "dish_wash_smart": {
+      "id": "KIT005",
+      "name": "Dish Wash Liquid Smart",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 1800,
+        "currency": "INR",
+        "yield": "55 liters",
+        "cost_per_liter": 33
+      },
+      "description": "Large volume dish wash liquid kit for commercial production",
+      "ingredients": [
+        {
+          "name": "Dish Wash Liquid Kit (Smart)",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "100 liter large barrel",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Large plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "50 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "2+ hours",
+        "difficulty": "Easy",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Add Base Paste",
+            "instruction": "Put the 'paste' from the 'Dish Wash Liquid Smart' kit into a 100 liter barrel",
+            "time": "2 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Add Additives",
+            "instruction": "Add 'Scent' and 'Thickener Powder' to it and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 3,
+            "title": "First Water Addition",
+            "instruction": "Pour 10 liters of RO water into it and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 4,
+            "title": "Second Water Addition",
+            "instruction": "Pour 10 liters of RO water again and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 5,
+            "title": "Final Water Addition",
+            "instruction": "Pour the remaining 30 liters of RO water into it and mix well",
+            "time": "10 minutes"
+          },
+          {
+            "step": 6,
+            "title": "Foam Settlement",
+            "instruction": "The liquid in the barrel will be full of foam. Wait for the foam to settle",
+            "time": "30 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Add Color",
+            "instruction": "Mix 'Color Powder' with RO water, then pour it in little by little and mix it",
+            "time": "5 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Add Salt for Thickness",
+            "instruction": "Add 'Salt' from the 'Dish Wash Liquid SMART' Kit and mix it until it dissolves well. It will become thick in a while",
+            "time": "10 minutes"
+          },
+          {
+            "step": 9,
+            "title": "Final Product",
+            "instruction": "The 55 liters of 'Dish Wash Liquid 'SMART' is now ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "55 liters of premium dish wash liquid"
+      },
+      "video_url": "Coming Soon",
+      "keywords": ["dish", "wash", "liquid", "smart", "commercial", "bulk"],
+      "business_info": {
+        "profit_margin": "Very High - 400%+",
+        "market_demand": "High",
+        "competition": "Medium"
+      }
+    },
+    "floor_cleaner_ultra": {
+      "id": "KIT006",
+      "name": "Floor Cleaner Ultra",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 1100,
+        "currency": "INR",
+        "yield": "20 liters",
+        "cost_per_liter": 55
+      },
+      "description": "Premium floor cleaner kit with excellent fragrance and cleaning power",
+      "ingredients": [
+        {
+          "name": "Floor Cleaning Kit (Ultra)",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "30 liters large bucket",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "20 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "6+ hours",
+        "difficulty": "Easy",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Add SLES Paste",
+            "instruction": "Put the SLES paste from the kit into the bucket",
+            "time": "2 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Add AOS",
+            "instruction": "Pour 1 liter of 'AOS' into it and mix it with a plastic stick",
+            "time": "3 minutes"
+          },
+          {
+            "step": 3,
+            "title": "Add Scent",
+            "instruction": "Pour 'SCENT' into it and mix it well for a while. It will now turn into a 'paste'",
+            "time": "5 minutes"
+          },
+          {
+            "step": 4,
+            "title": "Add Water Gradually",
+            "instruction": "Pour 20 liters of RO water little by little and mix it completely. The bucket will be foamy",
+            "time": "10 minutes"
+          },
+          {
+            "step": 5,
+            "title": "Rest Period",
+            "instruction": "Leave it for 6 hours",
+            "time": "6 hours"
+          },
+          {
+            "step": 6,
+            "title": "Check Foam Settlement",
+            "instruction": "After 6 hours, the resulting bucket will be free of foam",
+            "time": "1 minute"
+          },
+          {
+            "step": 7,
+            "title": "Add Color",
+            "instruction": "Mix the 'color powder' with a little water and mix it while pouring it in little by little",
+            "time": "5 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Final Product",
+            "instruction": "The good-smelling 'Floor Cleaner Liquid ULTRA' is now ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "20 liters of premium floor cleaner with excellent fragrance"
+      },
+      "video_url": "https://youtu.be/bnvclNk4sO4?si=4U-jigS7ZQMzr8ht",
+      "keywords": ["floor", "cleaner", "ultra", "cleaning", "home", "fragrance"],
+      "business_info": {
+        "profit_margin": "High - 300%+",
+        "market_demand": "High",
+        "competition": "Medium"
+      }
+    },
+    "floor_cleaner_smart": {
+      "id": "KIT007",
+      "name": "Floor Cleaner Liquid Smart",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 2000,
+        "currency": "INR",
+        "yield": "50 liters",
+        "cost_per_liter": 40
+      },
+      "description": "Large volume floor cleaner kit for commercial production",
+      "ingredients": [
+        {
+          "name": "Floor Cleaner Liquid Kit (Smart)",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "100 liter large barrel",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Large plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "50 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "2+ hours",
+        "difficulty": "Easy",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Add Base Paste",
+            "instruction": "Put the 'paste' from the Floor Cleaner Liquid Smart kit into a 100 liter barrel",
+            "time": "2 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Add Additives",
+            "instruction": "Add 'Scent' and 'Thickener Powder' to it and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 3,
+            "title": "First Water Addition",
+            "instruction": "Pour 10 liters of RO water into it and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 4,
+            "title": "Second Water Addition",
+            "instruction": "Pour 10 liters of RO water again and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 5,
+            "title": "Final Water Addition",
+            "instruction": "Pour the remaining 30 liters of RO water into it and mix well",
+            "time": "10 minutes"
+          },
+          {
+            "step": 6,
+            "title": "Foam Settlement",
+            "instruction": "The liquid in the barrel will be full of foam. Wait for the foam to settle",
+            "time": "30 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Add Color",
+            "instruction": "Mix the 'Color Powder' with RO water, then pour it in little by little and mix it",
+            "time": "5 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Add Salt for Thickness",
+            "instruction": "Add the 'Salt' from the 'Floor Cleaner Liquid SMART' Kit and mix it until it dissolves well. It will become thick in a while",
+            "time": "10 minutes"
+          },
+          {
+            "step": 9,
+            "title": "Final Product",
+            "instruction": "The 50 liters of 'Floor Cleaner Liquid 'SMART' is now ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "50 liters of premium floor cleaner"
+      },
+      "video_url": "Coming Soon",
+      "keywords": ["floor", "cleaner", "smart", "commercial", "bulk"],
+      "business_info": {
+        "profit_margin": "Very High - 400%+",
+        "market_demand": "High",
+        "competition": "Medium"
+      }
+    },
+    "soap_oil": {
+      "id": "KIT008",
+      "name": "Soap Oil",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 700,
+        "currency": "INR",
+        "yield": "55 liters",
+        "cost_per_liter": 13
+      },
+      "description": "Economical soap oil production kit for large volume manufacturing",
+      "ingredients": [
+        {
+          "name": "Soap Oil Kit",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "100 liters big barrel",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Big plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "50 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "10+ hours",
+        "difficulty": "Medium",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Initial Water Setup",
+            "instruction": "Pour 20 liters of RO water in a 100 liter barrel",
+            "time": "2 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Add Soda Ash",
+            "instruction": "Pour the 'Soda Ash Powder' from the 'Soap Oil Kit' into it and mix it well. The powder will turn into small lumps",
+            "time": "5 minutes"
+          },
+          {
+            "step": 3,
+            "title": "Break Lumps",
+            "instruction": "Break the lumps well with a big plastic stick and mix them well",
+            "time": "10 minutes"
+          },
+          {
+            "step": 4,
+            "title": "First Wait Period",
+            "instruction": "Wait for 4 hours",
+            "time": "4 hours"
+          },
+          {
+            "step": 5,
+            "title": "Add Acid Slurry",
+            "instruction": "After 4 hours, pour the 'Asis Sileri' (Acid Slurry) into it little by little and mix it. It will boil like milk",
+            "time": "10 minutes",
+            "warning": "Will create heat reaction"
+          },
+          {
+            "step": 6,
+            "title": "Cool Down",
+            "instruction": "Leave it for a while (15 minutes is enough)",
+            "time": "15 minutes"
+          },
+          {
+            "step": 7,
+            "title": "Add Remaining Water",
+            "instruction": "Pour the remaining 30 liters of RO water into it and mix well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 8,
+            "title": "Add Thickener",
+            "instruction": "Add the 'Thickener Powder' from the 'Soap Oil Kit' and mix it until it dissolves well",
+            "time": "8 minutes"
+          },
+          {
+            "step": 9,
+            "title": "Add Color",
+            "instruction": "Mix the 'Color Powder' with some RO water and pour it little by little according to the color needed, and mix it",
+            "time": "5 minutes"
+          },
+          {
+            "step": 10,
+            "title": "Final Rest",
+            "instruction": "Leave it for 6 hours",
+            "time": "6 hours"
+          },
+          {
+            "step": 11,
+            "title": "Final Product",
+            "instruction": "After 6 hours, the 55 liters of 'Soap Oil' is ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "55 liters of quality soap oil"
+      },
+      "video_url": "Coming Soon",
+      "keywords": ["soap", "oil", "manufacturing", "bulk", "commercial"],
+      "business_info": {
+        "profit_margin": "Excellent - 500%+",
+        "market_demand": "High",
+        "competition": "Low"
+      }
+    },
+    "phenyl_compound": {
+      "id": "KIT009",
+      "name": "Phenyl Compound",
+      "category": "DIY Kits",
+      "price": {
+        "kit_price": 300,
+        "currency": "INR",
+        "yield": "40 liters",
+        "cost_per_liter": 8
+      },
+      "description": "Simple and economical phenyl compound production kit",
+      "ingredients": [
+        {
+          "name": "Phenyl Compound Kit",
+          "quantity": "1 kit",
+          "included": true
+        },
+        {
+          "name": "50 liters big barrel",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "Big plastic stick",
+          "quantity": "1 piece",
+          "included": false
+        },
+        {
+          "name": "RO water",
+          "quantity": "40 liters",
+          "included": false
+        }
+      ],
+      "recipe": {
+        "preparation_time": "15 minutes",
+        "difficulty": "Very Easy",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Add Base Compound",
+            "instruction": "Pour the 'Phenyl Compound' from the kit into a 50 liter barrel and mix it well",
+            "time": "5 minutes"
+          },
+          {
+            "step": 2,
+            "title": "Add Water",
+            "instruction": "Pour 40 liters of RO water into it and mix it well",
+            "time": "8 minutes"
+          },
+          {
+            "step": 3,
+            "title": "Final Product",
+            "instruction": "The good-smelling 'Phenyl Compound' is ready",
+            "time": "Complete"
+          }
+        ],
+        "final_result": "40 liters of phenyl compound disinfectant"
+      },
+      "video_url": "Coming Soon",
+      "keywords": ["phenyl", "compound", "disinfectant", "cleaning", "floor"],
+      "business_info": {
+        "profit_margin": "Excellent - 600%+",
+        "market_demand": "Medium",
+        "competition": "Low"
+      }
+    }
+  },
+  "business_info": {
+    "company_name": "Rose Chemicals",
+    "specialization": "DIY Chemical Production Kits",
+    "support": "Complete recipe guidance and technical support provided",
+    "market_advantages": [
+      "Cost-effective production",
+      "High profit margins",
+      "Quality comparable to branded products",
+      "Complete kit solutions"
+    ]
+  },
+  "general_faqs": [
+    {
+      "question": "What water should I use for all recipes?",
+      "answer": "Always use RO (Reverse Osmosis) water for best results. Tap water may affect the quality and consistency of the final product."
+    },
+    {
+      "question": "Can I scale up or down the recipes?",
+      "answer": "Yes, but maintain the exact ratios. For scaling, calculate proportionally. We recommend starting with the standard kit size first."
+    },
+    {
+      "question": "How long do the finished products last?",
+      "answer": "Most products have a shelf life of 12-18 months when stored properly in clean, sealed containers away from direct sunlight."
+    },
+    {
+      "question": "Do you provide technical support?",
+      "answer": "Yes, we provide complete technical support including video tutorials, troubleshooting guides, and phone consultation."
+    },
+    {
+      "question": "What safety precautions should I take?",
+      "answer": "Always wear gloves, work in ventilated areas, handle caustic materials carefully, and keep products away from children. Follow all safety instructions provided with kits."
+    }
+  ],
+  "troubleshooting": {
+    "common_issues": {
+      "too_thin": {
+        "problem": "Product is too thin/watery",
+        "solution": "Add thickener powder gradually while mixing. Let it rest for 30 minutes to achieve proper consistency."
+      },
+      "too_thick": {
+        "problem": "Product is too thick",
+        "solution": "Add small amounts of RO water while mixing until desired consistency is achieved."
+      },
+      "poor_fragrance": {
+        "problem": "Weak or no fragrance",
+        "solution": "Ensure scent is added after cooling. Mix scent with small amount of product first, then add to main batch."
+      },
+      "color_issues": {
+        "problem": "Uneven color or wrong shade",
+        "solution": "Always pre-mix color powder with water. Add gradually while mixing continuously. Test small batch first."
+      },
+      "foam_problems": {
+        "problem": "Excessive foam that won't settle",
+        "solution": "Allow longer settling time (up to 12 hours). Avoid over-mixing once water is added."
+      }
+    }
+  }
+}

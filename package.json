@@ -1,0 +1,32 @@
+{
+  "name": "whatsapp-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:debug": "nodemon debug_server.js",
+    "start:smart": "nodemon smart_bot_server.js",
+    "start:ai": "nodemon ai_sales_bot_server.js",
+    "test": "node test_twilio_webhook.js",
+    "setup": "node setup_twilio.js",
+    "send": "node send_message.js",
+    "enhance": "node auto_enhance_products.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@huggingface/inference": "^4.11.0",
+    "axios": "^1.12.2",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "fuzzysort": "^3.1.0",
+    "natural": "^8.1.0",
+    "node-fetch": "^2.7.0",
+    "twilio": "^5.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

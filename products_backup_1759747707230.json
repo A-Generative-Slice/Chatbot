@@ -1,0 +1,1180 @@
+{
+  "categories": {
+    "chemical_raw_materials": {
+      "name": "Chemical - Raw Materials",
+      "products": [
+        {
+          "id": 1,
+          "name": "ACETIC ACID - KG",
+          "mrp": 170
+        },
+        {
+          "id": 2,
+          "name": "TSP-KG",
+          "mrp": 121
+        },
+        {
+          "id": 3,
+          "name": "EDTA-KG",
+          "mrp": 391
+        },
+        {
+          "id": 4,
+          "name": "STPP-KG",
+          "mrp": 209
+        },
+        {
+          "id": 5,
+          "name": "GLYCERINE-KG",
+          "mrp": 196
+        },
+        {
+          "id": 6,
+          "name": "OLEIC ACID - LITRE",
+          "mrp": 261
+        },
+        {
+          "id": 7,
+          "name": "LABSA(SLURRY) - ACID SLURRY",
+          "mrp": 180
+        },
+        {
+          "id": 8,
+          "name": "SLES PASTE -70%",
+          "mrp": 185
+        },
+        {
+          "id": 9,
+          "name": "AT-ACID THICKNER",
+          "mrp": 362
+        },
+        {
+          "id": 10,
+          "name": "CAPB",
+          "mrp": 163
+        },
+        {
+          "id": 11,
+          "name": "ECOFIN CONC",
+          "mrp": 1999
+        },
+        {
+          "id": 12,
+          "name": "SYMCAP S1 SPRING BLOSSOM - 216120",
+          "mrp": 2655
+        },
+        {
+          "id": 13,
+          "name": "SYMCAP S1 MOMENTS - 219063",
+          "mrp": 2655
+        },
+        {
+          "id": 14,
+          "name": "HPMC",
+          "mrp": 1999
+        },
+        {
+          "id": 15,
+          "name": "SN 937",
+          "mrp": 378
+        },
+        {
+          "id": 16,
+          "name": "CDEA",
+          "mrp": 259
+        }
+      ]
+    },
+    "perfumes": {
+      "name": "Perfumes",
+      "products": [
+        {
+          "id": 49,
+          "name": "LIME PERFUME- DISHWASH",
+          "mrp": 702
+        },
+        {
+          "id": 50,
+          "name": "ARIEL PERFUME",
+          "mrp": 1407
+        },
+        {
+          "id": 51,
+          "name": "SURF EXCEL PERFUME",
+          "mrp": 1407
+        },
+        {
+          "id": 52,
+          "name": "PHENYL FRUITPERFUME",
+          "mrp": 805
+        },
+        {
+          "id": 53,
+          "name": "PHENYL LEMON PERFUME",
+          "mrp": 805
+        },
+        {
+          "id": 54,
+          "name": "PHENYL JASMINE PERFUME",
+          "mrp": 805
+        },
+        {
+          "id": 55,
+          "name": "PHENYL JAWA PERFUME",
+          "mrp": 805
+        },
+        {
+          "id": 56,
+          "name": "PHENYL LAVENDER PERFUME",
+          "mrp": 805
+        },
+        {
+          "id": 57,
+          "name": "PHENYL ROSE PERFUME",
+          "mrp": 805
+        }
+      ]
+    },
+    "ready_to_use_chemicals": {
+      "name": "Ready To Use Chemicals",
+      "products": [
+        {
+          "id": 58,
+          "name": "LUXELINEN - FABRIC CONDITIONER",
+          "mrp": 80
+        },
+        {
+          "id": 59,
+          "name": "SILKYSHINE -ULTRA - LIQUID DETERGENT",
+          "mrp": 80
+        },
+        {
+          "id": 60,
+          "name": "SILKYSHINE -SMART- LIQUID DETERGENT",
+          "mrp": 60
+        },
+        {
+          "id": 61,
+          "name": "GLEAM DROP - ULTRA - DISH WASH",
+          "mrp": 80
+        },
+        {
+          "id": 62,
+          "name": "GLEAM DROP - SMART- DISH WASH",
+          "mrp": 60
+        },
+        {
+          "id": 63,
+          "name": "SHINE BOWL - TOILET BOWL CLEANER",
+          "mrp": 60
+        },
+        {
+          "id": 64,
+          "name": "DEEP ZAP - STRAIN REMOVER",
+          "mrp": 60
+        },
+        {
+          "id": 65,
+          "name": "FLORAL MIST - SCENTED SOAP OIL",
+          "mrp": 60
+        },
+        {
+          "id": 66,
+          "name": "MULTI GLOW - SOAP OIL",
+          "mrp": 30
+        },
+        {
+          "id": 67,
+          "name": "MOP FRESH - ULTRA - FLOOR CLEANER",
+          "mrp": 80
+        },
+        {
+          "id": 68,
+          "name": "MOP FRESH -SMART -FLOOR CLEANER",
+          "mrp": 60
+        },
+        {
+          "id": 69,
+          "name": "BLISS BREEZE - ROOM FRESHENER",
+          "mrp": 120
+        },
+        {
+          "id": 70,
+          "name": "CRYSTAL WHITE - FABRIC WHITENER",
+          "mrp": 60
+        },
+        {
+          "id": 71,
+          "name": "MAX SHIELD - PHENYL COMPOUND",
+          "mrp": 400
+        },
+        {
+          "id": 72,
+          "name": "MAX SHIELD - PHENYL COMPOUND",
+          "mrp": 350
+        },
+        {
+          "id": 73,
+          "name": "MAX SHIELD - PHENYL COMPOUND",
+          "mrp": 130
+        },
+        {
+          "id": 74,
+          "name": "PRO SHIELD - PHENYL",
+          "mrp": 25
+        },
+        {
+          "id": 75,
+          "name": "FRAGRENTED PRO SHIELD - SCENTED PHENYL - LEMON",
+          "mrp": 35
+        },
+        {
+          "id": 76,
+          "name": "FRAGRENTED PRO SHIELD - SCENTED PHENYL - ROSE",
+          "mrp": 35
+        },
+        {
+          "id": 77,
+          "name": "FRAGRENTED PRO SHIELD - SCENTED PHENYL - LAVENDER",
+          "mrp": 35
+        },
+        {
+          "id": 78,
+          "name": "FRAGRENTED PRO SHIELD - SCENTED PHENYL - JASMIN",
+          "mrp": 35
+        },
+        {
+          "id": 79,
+          "name": "ACID",
+          "mrp": 35
+        }
+      ]
+    },
+    "nouful_products": {
+      "name": "Nouful Products",
+      "products": [
+        {
+          "id": 80,
+          "name": "9967 SPL HARDY SET BIG",
+          "mrp": 288
+        },
+        {
+          "id": 81,
+          "name": "9965 SPL HARDY SET",
+          "mrp": 229
+        },
+        {
+          "id": 82,
+          "name": "KITCHEN ROLL 45X500",
+          "mrp": 295
+        },
+        {
+          "id": 83,
+          "name": "AVON CARPET BRUSH (307)",
+          "mrp": 127
+        },
+        {
+          "id": 84,
+          "name": "GALA STATIC BRUSH",
+          "mrp": 222
+        },
+        {
+          "id": 85,
+          "name": "8851 DOUBLE HOCKEY NEW MODAL",
+          "mrp": 77
+        },
+        {
+          "id": 86,
+          "name": "FAN BROON SPL",
+          "mrp": 215
+        },
+        {
+          "id": 87,
+          "name": "3008 GLASS WIPER",
+          "mrp": 52
+        },
+        {
+          "id": 88,
+          "name": "WINDOW WIPER",
+          "mrp": 50
+        },
+        {
+          "id": 89,
+          "name": "NBC4060 MICRO CUP 160 GM",
+          "mrp": 118
+        },
+        {
+          "id": 90,
+          "name": "ZH09 - 13 MICRO SS ROUND F/D 215 GM",
+          "mrp": 186
+        },
+        {
+          "id": 91,
+          "name": "CONTINER BRUSH 8312",
+          "mrp": 97
+        },
+        {
+          "id": 92,
+          "name": "SAMARTHYA MURAM",
+          "mrp": 68
+        },
+        {
+          "id": 93,
+          "name": "MURAM SPL",
+          "mrp": 57
+        },
+        {
+          "id": 94,
+          "name": "MURAM SADA BIG",
+          "mrp": 42
+        },
+        {
+          "id": 95,
+          "name": "MURAM SMALL SADA",
+          "mrp": 34
+        },
+        {
+          "id": 96,
+          "name": "FABLAS KITCHEN ROLL",
+          "mrp": 186
+        },
+        {
+          "id": 97,
+          "name": "712 NEW SINK BRUSH",
+          "mrp": 38
+        },
+        {
+          "id": 98,
+          "name": "Z 12 MICRO GLOVE",
+          "mrp": 71
+        },
+        {
+          "id": 99,
+          "name": "NEO SINK BRUSH",
+          "mrp": 48
+        },
+        {
+          "id": 100,
+          "name": "SUPREME SINK SQUIRE",
+          "mrp": 57
+        },
+        {
+          "id": 101,
+          "name": "MAGIC SPONG",
+          "mrp": 68
+        },
+        {
+          "id": 102,
+          "name": "8201 WHITE IRON BRUSH",
+          "mrp": 52
+        },
+        {
+          "id": 103,
+          "name": "SUPREEM IRON BRUSH",
+          "mrp": 68
+        },
+        {
+          "id": 104,
+          "name": "BLACK IRON BRUSH",
+          "mrp": 68
+        },
+        {
+          "id": 105,
+          "name": "SAMARTHYA A1 KITCHEN WIPER",
+          "mrp": 45
+        },
+        {
+          "id": 106,
+          "name": "MURAM WITH BRUSH 109 SMALL",
+          "mrp": 29
+        },
+        {
+          "id": 107,
+          "name": "5500 KETTAL BRUSH",
+          "mrp": 30
+        },
+        {
+          "id": 108,
+          "name": "2381 SINK BRUSH",
+          "mrp": 38
+        },
+        {
+          "id": 109,
+          "name": "H36 MINI DUSTER SPL 43 GM",
+          "mrp": 43
+        },
+        {
+          "id": 110,
+          "name": "BODY FLOWER BRUSH",
+          "mrp": 38
+        },
+        {
+          "id": 111,
+          "name": "BODY BELT",
+          "mrp": 29
+        },
+        {
+          "id": 112,
+          "name": "BODY SPONGE",
+          "mrp": 30
+        },
+        {
+          "id": 113,
+          "name": "1511 NEW CARPET BRUSH",
+          "mrp": 68
+        },
+        {
+          "id": 114,
+          "name": "SINK BRUSH 4-D SQUARE",
+          "mrp": 68
+        },
+        {
+          "id": 115,
+          "name": "CODI COIR 10 MTR",
+          "mrp": 38
+        },
+        {
+          "id": 116,
+          "name": "6606 CLOTH BRUSH",
+          "mrp": 50
+        },
+        {
+          "id": 117,
+          "name": "SILVER POLISH",
+          "mrp": 68
+        },
+        {
+          "id": 118,
+          "name": "METAL POLISH",
+          "mrp": 111
+        },
+        {
+          "id": 119,
+          "name": "1642 NEW CONTAINER BRUSH",
+          "mrp": 141
+        },
+        {
+          "id": 120,
+          "name": "1807 SINK BRUSH",
+          "mrp": 39
+        },
+        {
+          "id": 121,
+          "name": "FRIDGE BAG",
+          "mrp": 68
+        },
+        {
+          "id": 122,
+          "name": "THK1108",
+          "mrp": 68
+        },
+        {
+          "id": 123,
+          "name": "THK 140",
+          "mrp": 111
+        },
+        {
+          "id": 124,
+          "name": "METAL PAD (SHEET)",
+          "mrp": 11
+        },
+        {
+          "id": 125,
+          "name": "CLEANING TOWEL 5 PCS SET",
+          "mrp": 59
+        }
+      ]
+    },
+    "global_product_mart": {
+      "name": "Global Product Mart",
+      "products": [
+        {
+          "id": 126,
+          "name": "NORMAL WOOLED DRY MOP SET 24 INCH",
+          "mrp": 192
+        },
+        {
+          "id": 127,
+          "name": "NORMAL WOOLED DRY MOP SET 18 INCH",
+          "mrp": 168
+        },
+        {
+          "id": 128,
+          "name": "MICROFIBER DRY MOP SET 24 INCH",
+          "mrp": 255
+        },
+        {
+          "id": 129,
+          "name": "MICROFIBER DRY MOP SET 18 INCH",
+          "mrp": 208
+        },
+        {
+          "id": 130,
+          "name": "DOUBLE BLADE INDUSTRIAL FLOOR WIPER 55CM",
+          "mrp": 144
+        },
+        {
+          "id": 131,
+          "name": "DOUBLE BLADE FLOOR WIPER 45CM",
+          "mrp": 128
+        },
+        {
+          "id": 132,
+          "name": "CHECK DUSTER 18X18",
+          "mrp": 72
+        },
+        {
+          "id": 133,
+          "name": "RUBI CHECK DUSTER 18X18",
+          "mrp": 83
+        },
+        {
+          "id": 134,
+          "name": "CHECK DUSTER SMALL HEAVY",
+          "mrp": 79
+        },
+        {
+          "id": 135,
+          "name": "CHAK DE INDIA DUSTER 20X20",
+          "mrp": 129
+        },
+        {
+          "id": 136,
+          "name": "KAMAL CHECK 20X20",
+          "mrp": 112
+        },
+        {
+          "id": 137,
+          "name": "MICROFIBER CLOTH 500GSM",
+          "mrp": 52
+        },
+        {
+          "id": 138,
+          "name": "MICROFIBER CLOTH 40X40 CM",
+          "mrp": 23
+        },
+        {
+          "id": 139,
+          "name": "MUMBAI FLOOR DUSTER 20X20",
+          "mrp": 157
+        },
+        {
+          "id": 140,
+          "name": "A1 FLOOR DUSTER 24X24",
+          "mrp": 235
+        },
+        {
+          "id": 141,
+          "name": "YELLOW DUSTER 18X18",
+          "mrp": 112
+        },
+        {
+          "id": 142,
+          "name": "CELLULOSE CLOTH 5PC PACK",
+          "mrp": 126
+        },
+        {
+          "id": 143,
+          "name": "AIR PURIFIER(REVITALIZOR)606A",
+          "mrp": 941
+        },
+        {
+          "id": 144,
+          "name": "AIR PURIFIER(REVITALIZOR)606A WITH LED LIGHT",
+          "mrp": 1020
+        },
+        {
+          "id": 145,
+          "name": "HOUSEHOLD GLOVES",
+          "mrp": 44
+        },
+        {
+          "id": 146,
+          "name": "PLASTIC CARPET BRUSH",
+          "mrp": 70
+        },
+        {
+          "id": 147,
+          "name": "FEATHER DUSTER SMALL",
+          "mrp": 49
+        },
+        {
+          "id": 148,
+          "name": "SPRAY BOTTLE",
+          "mrp": 41
+        },
+        {
+          "id": 149,
+          "name": "ALFA FLOOR WIPER 21 INCH",
+          "mrp": 113
+        },
+        {
+          "id": 150,
+          "name": "VENUS FLOOR WIPER 18 INCH",
+          "mrp": 104
+        },
+        {
+          "id": 151,
+          "name": "JUPITER FLOOR WIPER 16 INCH",
+          "mrp": 81
+        },
+        {
+          "id": 152,
+          "name": "PANTHER FLOOR WIPER 16 INCH",
+          "mrp": 96
+        },
+        {
+          "id": 153,
+          "name": "BATHROOM FLOOR WIRER 12 INCH",
+          "mrp": 52
+        },
+        {
+          "id": 154,
+          "name": "GLASS WIPER",
+          "mrp": 26
+        },
+        {
+          "id": 155,
+          "name": "IRONMAN 20 INCH WIPER",
+          "mrp": 185
+        },
+        {
+          "id": 156,
+          "name": "IRONMAN 18 INCH WIPER",
+          "mrp": 168
+        },
+        {
+          "id": 157,
+          "name": "SILICON FLOOR WIPER 12 INCH",
+          "mrp": 57
+        },
+        {
+          "id": 158,
+          "name": "SILICON FLOOR WIPER 16 INCH",
+          "mrp": 84
+        },
+        {
+          "id": 159,
+          "name": "GREEN PAD 10X15 (10PCS)",
+          "mrp": 52
+        },
+        {
+          "id": 160,
+          "name": "SS SCRUBBER PATTA",
+          "mrp": 41
+        },
+        {
+          "id": 161,
+          "name": "TYLO TILE BRUSH",
+          "mrp": 36
+        },
+        {
+          "id": 162,
+          "name": "FOAM PAD SCRUBBER 20MM",
+          "mrp": 64
+        },
+        {
+          "id": 163,
+          "name": "PLASTIC SCRUBBER",
+          "mrp": 81
+        }
+      ]
+    },
+    "brooms": {
+      "name": "Brooms",
+      "products": [
+        {
+          "id": 164,
+          "name": "DELUX NICE BROOM",
+          "mrp": 115
+        },
+        {
+          "id": 165,
+          "name": "TULSI BLUE COVER BROOM",
+          "mrp": 89
+        },
+        {
+          "id": 166,
+          "name": "SITARA BROOM",
+          "mrp": 89
+        },
+        {
+          "id": 167,
+          "name": "SUPRIYA NICE BROOM",
+          "mrp": 115
+        },
+        {
+          "id": 168,
+          "name": "CAMEL RED BROOM",
+          "mrp": 69
+        },
+        {
+          "id": 169,
+          "name": "SHINE RED BROOM",
+          "mrp": 69
+        },
+        {
+          "id": 170,
+          "name": "SHINE BLUE BROOM",
+          "mrp": 69
+        },
+        {
+          "id": 171,
+          "name": "PINKY RED BROOM",
+          "mrp": 78
+        },
+        {
+          "id": 172,
+          "name": "PINKY BLUE BROOM",
+          "mrp": 78
+        },
+        {
+          "id": 173,
+          "name": "JUMBO RED BROOM",
+          "mrp": 129
+        },
+        {
+          "id": 174,
+          "name": "AMIL RED BROOM",
+          "mrp": 115
+        },
+        {
+          "id": 175,
+          "name": "TULSI GREEN COVER BROOM",
+          "mrp": 109
+        },
+        {
+          "id": 176,
+          "name": "CHENNAI BROOM SMALL",
+          "mrp": 77
+        },
+        {
+          "id": 177,
+          "name": "CHENNAI BROOM BIG",
+          "mrp": 93
+        },
+        {
+          "id": 178,
+          "name": "LADY DREAM PLASTIC BROOM",
+          "mrp": 111
+        },
+        {
+          "id": 179,
+          "name": "CLEAN MART PLASTIC BROOM",
+          "mrp": 104
+        },
+        {
+          "id": 180,
+          "name": "MR CLEAN",
+          "mrp": 53
+        },
+        {
+          "id": 181,
+          "name": "CAMEL 5D ORANGE",
+          "mrp": 90
+        },
+        {
+          "id": 182,
+          "name": "CAMEL 5D PLASTIC HANDLE",
+          "mrp": 82
+        },
+        {
+          "id": 183,
+          "name": "AMIL BLUE NICE BROOM",
+          "mrp": 95
+        },
+        {
+          "id": 184,
+          "name": "CAMAROON BROOM 3 SMALL - Burma Broom",
+          "mrp": 105
+        },
+        {
+          "id": 185,
+          "name": "CHENNAI COVER BURMA",
+          "mrp": 93
+        },
+        {
+          "id": 186,
+          "name": "PLAIN BURMA",
+          "mrp": 93
+        },
+        {
+          "id": 187,
+          "name": "NICE BURMA",
+          "mrp": 113
+        },
+        {
+          "id": 188,
+          "name": "CHENNAI BURMA",
+          "mrp": 93
+        }
+      ]
+    },
+    "china_products": {
+      "name": "China Products",
+      "products": [
+        {
+          "id": 189,
+          "name": "167 MOP (MEDIUM)",
+          "mrp": 38
+        },
+        {
+          "id": 190,
+          "name": "167A MOP MEDIUM",
+          "mrp": 39
+        },
+        {
+          "id": 191,
+          "name": "WOODEN BROOM STICK",
+          "mrp": 11
+        },
+        {
+          "id": 192,
+          "name": "1105 CLEANING BRUSH",
+          "mrp": 12
+        },
+        {
+          "id": 193,
+          "name": "BROOMS STICK 120",
+          "mrp": 38
+        },
+        {
+          "id": 194,
+          "name": "3117 CLEANING BROOMS WITH STICK",
+          "mrp": 34
+        },
+        {
+          "id": 195,
+          "name": "7023 CLEANING BROOM WITH STICK",
+          "mrp": 30
+        },
+        {
+          "id": 196,
+          "name": "2026 CLEANING BROOM WITH STICK",
+          "mrp": 32
+        },
+        {
+          "id": 197,
+          "name": "1103 CLEANING BRUSH - ROUND",
+          "mrp": 17
+        },
+        {
+          "id": 198,
+          "name": "1202 CLEANING BRUSH - SQUARE",
+          "mrp": 17
+        },
+        {
+          "id": 199,
+          "name": "1106 ROUND BIG - TOILET BRUSH ROUND",
+          "mrp": 36
+        },
+        {
+          "id": 200,
+          "name": "1010 CLEANING BRUSH S",
+          "mrp": 16
+        },
+        {
+          "id": 201,
+          "name": "1101 RICH LOOK - TOILET BRUSH SINGLE HOCKY SMALL",
+          "mrp": 32
+        },
+        {
+          "id": 202,
+          "name": "SUPER MOPY - KITCHEN WIPER",
+          "mrp": 22
+        },
+        {
+          "id": 203,
+          "name": "167 QUICK MOP - CHINA TWIST MOP COLOUR",
+          "mrp": 142
+        },
+        {
+          "id": 204,
+          "name": "167 A STEEL TWISTED MOP - SS",
+          "mrp": 147
+        },
+        {
+          "id": 205,
+          "name": "1103 SINK BRUSH",
+          "mrp": 18
+        },
+        {
+          "id": 206,
+          "name": "1202 SINK BRUSH",
+          "mrp": 18
+        },
+        {
+          "id": 207,
+          "name": "2200 SUNFLOWER SET",
+          "mrp": 82
+        },
+        {
+          "id": 208,
+          "name": "2026 SET - SOFT BRUSH P.C",
+          "mrp": 134
+        },
+        {
+          "id": 209,
+          "name": "3112 FANCY BROOM",
+          "mrp": 134
+        },
+        {
+          "id": 210,
+          "name": "3117 FANCY BROOM 4FT",
+          "mrp": 134
+        },
+        {
+          "id": 211,
+          "name": "7023 FANCY BROOM",
+          "mrp": 127
+        },
+        {
+          "id": 212,
+          "name": "9988 REFIM",
+          "mrp": 83
+        },
+        {
+          "id": 213,
+          "name": "8226 (1100) TOILET BRUSH DOUBLE HOCKEY",
+          "mrp": 41
+        },
+        {
+          "id": 214,
+          "name": "1501 RICH LOOK -TOILET BRUSH SINGLE HOCKY BIG",
+          "mrp": 39
+        },
+        {
+          "id": 215,
+          "name": "1010 RICH LOOK STEEL - TOILET BRUSH SINGLE HOCHY SS",
+          "mrp": 48
+        },
+        {
+          "id": 216,
+          "name": "1105 HARDY BRUSH",
+          "mrp": 54
+        },
+        {
+          "id": 217,
+          "name": "LADYDREAM DUST FREE PLASTIC BROOM",
+          "mrp": 97
+        },
+        {
+          "id": 218,
+          "name": "3300 JUMBO TOILET BRUSH DOUBLE HOCKY",
+          "mrp": 68
+        },
+        {
+          "id": 219,
+          "name": "2200 SUNFLOWER SET (SPL) OUTER LOCK",
+          "mrp": 98
+        },
+        {
+          "id": 220,
+          "name": "WOOD STICK COLOUR 4 FT",
+          "mrp": 18
+        }
+      ]
+    },
+    "containers": {
+      "name": "Containers",
+      "products": [
+        {
+          "id": 221,
+          "name": "1 LITRE LIQUID DETERGENT CONTAINER",
+          "mrp": 28
+        },
+        {
+          "id": 222,
+          "name": "5 LITRE LIQUID DETERGENT CONTAINER",
+          "mrp": 62
+        },
+        {
+          "id": 223,
+          "name": "500 ML FLOOR CLEANER CONTAINER",
+          "mrp": 12
+        },
+        {
+          "id": 224,
+          "name": "1 LITRE FLOOR CLEANER CONTAINER",
+          "mrp": 18
+        },
+        {
+          "id": 225,
+          "name": "250 ML TOILET CLEANER CONTAINER",
+          "mrp": 9
+        },
+        {
+          "id": 226,
+          "name": "500 ML TOILET CLEANER CONTAINER",
+          "mrp": 12
+        },
+        {
+          "id": 227,
+          "name": "1 LITRE TOILET CLEANER CONTAINER",
+          "mrp": 18
+        }
+      ]
+    },
+    "diy_kits": {
+      "name": "DIY Kits",
+      "products": [
+        {
+          "id": 301,
+          "name": "FABRIC CONDITIONER KIT",
+          "mrp": 1100,
+          "description": "Complete kit to prepare 20 liters of premium fabric conditioner",
+          "yield": "20 liters",
+          "cost_per_liter": 55,
+          "knowledge_id": "fabric_conditioner",
+          "tags": [
+            "fabric conditioner",
+            "fabric softener",
+            "comfort",
+            "laundry",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 302,
+          "name": "LIQUID DETERGENT ULTRA KIT",
+          "mrp": 1600,
+          "description": "Premium liquid detergent kit for high-quality washing gel production",
+          "yield": "25 liters",
+          "cost_per_liter": 64,
+          "knowledge_id": "liquid_detergent_ultra",
+          "tags": [
+            "liquid detergent",
+            "washing gel",
+            "ultra",
+            "laundry",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 303,
+          "name": "LIQUID DETERGENT SMART KIT",
+          "mrp": 2000,
+          "description": "Large volume liquid detergent kit for commercial production",
+          "yield": "55 liters",
+          "cost_per_liter": 36,
+          "knowledge_id": "liquid_detergent_smart",
+          "tags": [
+            "liquid detergent",
+            "smart",
+            "commercial",
+            "bulk",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 304,
+          "name": "DISH WASH LIQUID ULTRA KIT",
+          "mrp": 1200,
+          "description": "Professional grade dish wash liquid kit with superior cleaning power",
+          "yield": "23 liters",
+          "cost_per_liter": 52,
+          "knowledge_id": "dish_wash_ultra",
+          "tags": [
+            "dish wash",
+            "liquid",
+            "ultra",
+            "kitchen",
+            "cleaning",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 305,
+          "name": "DISH WASH LIQUID SMART KIT",
+          "mrp": 1800,
+          "description": "Large volume dish wash liquid kit for commercial production",
+          "yield": "55 liters",
+          "cost_per_liter": 33,
+          "knowledge_id": "dish_wash_smart",
+          "tags": [
+            "dish wash",
+            "smart",
+            "commercial",
+            "bulk",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 306,
+          "name": "FLOOR CLEANER ULTRA KIT",
+          "mrp": 1100,
+          "description": "Premium floor cleaner kit with excellent fragrance and cleaning power",
+          "yield": "20 liters",
+          "cost_per_liter": 55,
+          "knowledge_id": "floor_cleaner_ultra",
+          "tags": [
+            "floor cleaner",
+            "ultra",
+            "cleaning",
+            "home",
+            "fragrance",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 307,
+          "name": "FLOOR CLEANER SMART KIT",
+          "mrp": 2000,
+          "description": "Large volume floor cleaner kit for commercial production",
+          "yield": "50 liters",
+          "cost_per_liter": 40,
+          "knowledge_id": "floor_cleaner_smart",
+          "tags": [
+            "floor cleaner",
+            "smart",
+            "commercial",
+            "bulk",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 308,
+          "name": "SOAP OIL KIT",
+          "mrp": 700,
+          "description": "Economical soap oil production kit for large volume manufacturing",
+          "yield": "55 liters",
+          "cost_per_liter": 13,
+          "knowledge_id": "soap_oil",
+          "tags": [
+            "soap oil",
+            "manufacturing",
+            "bulk",
+            "commercial",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        },
+        {
+          "id": 309,
+          "name": "PHENYL COMPOUND KIT",
+          "mrp": 300,
+          "description": "Simple and economical phenyl compound production kit",
+          "yield": "40 liters",
+          "cost_per_liter": 8,
+          "knowledge_id": "phenyl_compound",
+          "tags": [
+            "phenyl",
+            "compound",
+            "disinfectant",
+            "cleaning",
+            "floor",
+            "DIY"
+          ],
+          "category": "DIY Kits"
+        }
+      ]
+    }
+  }
+}
