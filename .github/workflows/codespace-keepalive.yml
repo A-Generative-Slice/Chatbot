@@ -1,0 +1,23 @@
+name: Codespace Keep-Alive
+
+on:
+  schedule:
+    # Ping every 6 hours to keep Codespace active
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Keep Codespace Alive
+        run: |
+          echo "🔄 Keeping Codespace active..."
+          echo "⏰ Current time: $(date)"
+          echo "✅ Workflow executed successfully"
+          
+      - name: Notify
+        run: |
+          echo "📊 Codespace Status: Active"
+          echo "💡 Next ping in 6 hours"
