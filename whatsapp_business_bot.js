@@ -498,34 +498,32 @@ app.post('/webhook', async (req, res) => {
     // Mark as read
     await markAsRead(messageId);
 
-    // Check if user says "hi" or "hello" - always show greeting menu
+    // Check if user says "hi" or "hello" - ONLY way to start conversation
     const isGreeting = /^(hi|hello|hey|hii|helo|hola|vanakkam|vanakam|namaste|namaskar|namaskaram)$/i.test(messageBody.trim());
     
     if (isGreeting) {
-      // Reset language selection for greeting
-      let session = userSessions.get(from);
-      if (session) {
-        session.languageSelected = false;
-        session.language = 'en';
-      }
+      // Create or reset session when user says Hi
+      let session = {
+        language: 'en',
+        conversationContext: [],
+        createdAt: Date.now(),
+        languageSelected: false
+      };
+      userSessions.set(from, session);
+      
       const welcomeMsg = getWelcomeMessage('en');
       await sendWhatsAppMessage(from, welcomeMsg);
       console.log(`👋 User ${from} said greeting - showing language menu`);
       return;
     }
 
-    // Get or create user session
+    // Get user session - if no session exists, user must say "Hi" first
     let session = userSessions.get(from);
-    const isNewUser = !session;
     
     if (!session) {
-      session = {
-        language: 'en', // Start with English for greeting
-        conversationContext: [],
-        createdAt: Date.now(),
-        languageSelected: false
-      };
-      userSessions.set(from, session);
+      // User hasn't said "Hi" yet - don't respond to random messages
+      console.log(`⚠️ User ${from} hasn't started conversation with 'Hi' - ignoring message`);
+      return;
     }
 
     // Check if this is a language selection (only if not yet selected)
