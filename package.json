@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon whatsapp_business_bot.js",
-    "start:ai": "nodemon ai_sales_bot_server.js",
-    "start:whatsapp": "nodemon whatsapp_business_bot.js",
-    "start:legacy": "nodemon ai_sales_bot_server.js",
+    "start": "node whatsapp_business_bot.js",
+    "dev": "nodemon whatsapp_business_bot.js",
+    "start:ai": "node ai_sales_bot_server.js",
+    "start:whatsapp": "node whatsapp_business_bot.js",
+    "start:legacy": "node ai_sales_bot_server.js",
     "test": "node test_ai.js"
   },
   "keywords": [],
