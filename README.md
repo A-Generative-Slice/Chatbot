@@ -1,71 +1,22 @@
-# 🤖 Rose Chemicals WhatsApp Business Bot
+﻿# Rose Chemicals — WhatsApp Support Bot
 
-## 📁 Essential Files Only
+This repository contains a customer-facing WhatsApp bot that helps customers of Rose Chemicals quickly find products, check prices, and get assistance in their preferred language.
 
-### Core Files
-- **`whatsapp_business_bot.js`** - Main bot application (Node.js + Express)
-- **`.env`** - Configuration (API keys, tokens, phone IDs)
-- **`products.json`** - Product catalog (204 cleaning products)
-- **`package.json`** - npm dependencies
-- **`ngrok.exe`** - Tunnel for public webhook access
+Key user-facing capabilities:
+- Browse a catalog of cleaning products
+- Get fast product recommendations and pricing
+- Support in multiple Indian languages (user can select language interactively)
+- Simple conversational flow: greet, choose language, ask for product
 
-### Features
-✅ Multilingual AI (Tamil, Hindi, Telugu, Kannada, Malayalam, English)  
-✅ Tanglish/Hinglish detection (responds in native scripts)  
-✅ Greeting menu on "Hi" command  
-✅ Product search & recommendations with prices  
-✅ Sarvam AI integration (FREE model)  
-✅ Session management  
+How customers use it:
+1. Send "Hi" to the WhatsApp business number.
+2. The bot prompts for language selection.
+3. Ask for a product or a category (e.g., "soap", "floor cleaner").
+4. The bot replies with options and prices.
 
-## 🚀 Quick Start
+If you are maintaining this project, see the source files for implementation details. Sensitive credentials and deployment configuration are intentionally excluded from this public README.
 
-### 1. Start Bot
-```powershell
-npm start
-```
-
-### 2. Start Ngrok (New Terminal)
-```powershell
-.\ngrok.exe http 3000
-```
-
-### 3. Configure Webhook
-- Copy ngrok URL: `https://xxxx.ngrok-free.app`
-- Go to Meta Developer Console → WhatsApp → Configuration
-- Set Webhook URL: `https://xxxx.ngrok-free.app/webhook`
-- Verify Token: `RoseChemicals_WhatsApp_Verify_2025_Secure_Token_9X7K`
-
-## 🔧 Configuration (.env)
-
-```env
-WHATSAPP_TOKEN=<Your WhatsApp API Token>
-PHONE_NUMBER_ID=857249474128046
-AI_API_KEY=<Sarvam AI Key>
-VERIFY_TOKEN=RoseChemicals_WhatsApp_Verify_2025_Secure_Token_9X7K
-PORT=3000
-```
-
-## 📝 Important Notes
-
-- **Token expires every 24h** (temporary token) - get permanent System User token
-- **Ngrok URL changes** on restart - update webhook in Meta Console
-- **Test phone number** must be added in WhatsApp Business API setup
-- **204 products loaded** from 9 categories
-
-## 🆘 Health Check
-
-```
-http://localhost:3000/health
-```
-
-## 🎯 Bot Behavior
-
-1. Customer says **"Hi"** → Language menu (1-6)
-2. Customer selects **"2"** → Tamil confirmed
-3. Customer types **"soap venum"** (Tanglish) → Bot responds in Tamil script
-4. All future messages → Same language maintained
-5. Say **"Hi"** again → Reset & show menu
+For deployment, the service needs a running server with the appropriate environment variables configured. If you want, I can help deploy this to a free hosting provider and update the README with non-sensitive deployment steps.
 
 ---
-**Built with:** Node.js, Express, Sarvam AI, WhatsApp Cloud API  
-**Company:** Rose Chemicals - Premium Cleaning Solutions
+ Rose Chemicals
