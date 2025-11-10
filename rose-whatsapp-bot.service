@@ -1,0 +1,22 @@
+[Unit]
+Description=Rose Chemicals WhatsApp Bot
+Documentation=https://github.com/yourusername/Chatbot-main
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/rose-whatsapp-bot
+EnvironmentFile=/var/www/rose-whatsapp-bot/.env
+ExecStart=/usr/bin/node whatsapp_business_bot.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/var/log/rose-whatsapp-bot.log
+StandardError=append:/var/log/rose-whatsapp-bot-error.log
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,40 @@
+name: Setup Bot Environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      setup_env:
+        description: 'Setup environment for bot'
+        required: true
+        default: 'true'
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Create .env file
+        run: |
+          echo "HUGGINGFACE_TOKEN=${{ secrets.HUGGINGFACE_TOKEN }}" > .env
+          echo "✅ Environment configured!"
+      
+      - name: Test AI connection
+        run: node test_ai.js
+        env:
+          HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
+      
+      - name: Show success message
+        run: |
+          echo "✅ Bot environment is ready!"
+          echo "Token is configured from organization secrets."
