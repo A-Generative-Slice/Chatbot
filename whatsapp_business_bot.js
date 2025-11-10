@@ -166,6 +166,19 @@ function getWelcomeMessage(language = 'en') {
 
 async function sendWhatsAppMessage(to, message) {
   try {
+    // Debug: Check credentials
+    if (!WHATSAPP_TOKEN) {
+      console.error('❌ CRITICAL: WHATSAPP_TOKEN is missing!');
+      throw new Error('WHATSAPP_TOKEN not configured');
+    }
+    if (!PHONE_NUMBER_ID) {
+      console.error('❌ CRITICAL: PHONE_NUMBER_ID is missing!');
+      throw new Error('PHONE_NUMBER_ID not configured');
+    }
+
+    console.log(`📤 Sending message to ${to} via phone ID: ${PHONE_NUMBER_ID}`);
+    console.log(`📄 Message: ${message.substring(0, 100)}...`);
+
     const response = await axios.post(
       `https://graph.facebook.com/v18.0/${PHONE_NUMBER_ID}/messages`,
       {
@@ -181,10 +194,13 @@ async function sendWhatsAppMessage(to, message) {
         }
       }
     );
-    console.log(`✅ Message sent to ${to}:`, message.substring(0, 50) + '...');
+    console.log(`✅ Message successfully sent to ${to}`);
     return response.data;
   } catch (error) {
-    console.error('❌ WhatsApp send error:', error.response?.data || error.message);
+    console.error('❌ WhatsApp send error:');
+    console.error('   Status:', error.response?.status);
+    console.error('   Error:', error.response?.data?.error?.message);
+    console.error('   Full error:', error.response?.data || error.message);
     throw error;
   }
 }
@@ -637,9 +653,18 @@ app.listen(PORT, () => {
   console.log(`\n✅ Server running on port ${PORT}`);
   console.log(`🌐 Health check: http://localhost:${PORT}/health`);
   console.log(`📱 WhatsApp webhook: http://localhost:${PORT}/webhook`);
-  console.log(`\n🔑 Configuration:`);
-  console.log(`   • Sarvam AI: ${SARVAM_API_KEY ? '✅ Configured (Indian Languages Specialist!)' : '❌ Missing'}`);
-  console.log(`   • WhatsApp Token: ${WHATSAPP_TOKEN ? '✅ Configured' : '❌ Missing'}`);
-  console.log(`   • Phone Number ID: ${PHONE_NUMBER_ID ? '✅ Configured' : '❌ Missing'}`);
+  console.log(`\n🔑 Configuration Status:`);
+  console.log(`   • Sarvam AI: ${SARVAM_API_KEY ? '✅ Configured (Indian Languages Specialist!)' : '❌ Missing - AI_API_KEY'}`);
+  console.log(`   • WhatsApp Token: ${WHATSAPP_TOKEN ? '✅ Configured (' + WHATSAPP_TOKEN.substring(0, 20) + '...)' : '❌ Missing - WHATSAPP_TOKEN'}`);
+  console.log(`   • Phone Number ID: ${PHONE_NUMBER_ID ? '✅ Configured (' + PHONE_NUMBER_ID + ')' : '❌ Missing - PHONE_NUMBER_ID'}`);
+  console.log(`   • Verify Token: ${VERIFY_TOKEN ? '✅ Configured (' + VERIFY_TOKEN + ')' : '❌ Missing - VERIFY_TOKEN'}`);
+  console.log(`   • Products Loaded: ✅ ${ALL_PRODUCTS.length} items`);
+  
+  if (!WHATSAPP_TOKEN || !PHONE_NUMBER_ID) {
+    console.log('\n⚠️  WARNING: Missing credentials! Bot cannot send messages.');
+    console.log('   Set WHATSAPP_TOKEN and PHONE_NUMBER_ID in environment variables.');
+  }
+  
   console.log('\n💡 Press Ctrl+C to stop\n');
+});
 });
