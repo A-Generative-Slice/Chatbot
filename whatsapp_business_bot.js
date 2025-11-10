@@ -444,16 +444,27 @@ app.get('/webhook', (req, res) => {
   const token = req.query['hub.verify_token'];
   const challenge = req.query['hub.challenge'];
 
-  console.log('🔍 Webhook verification request:', { mode, token, challenge });
-  console.log('🔑 Expected token:', VERIFY_TOKEN);
+  console.log('🔍 Webhook verification request received');
+  console.log('   Mode:', mode);
+  console.log('   Token received:', token);
+  console.log('   Challenge:', challenge);
+  console.log('   Expected token:', VERIFY_TOKEN);
+  console.log('   Token match:', token === VERIFY_TOKEN);
 
+  // Token verification - CRITICAL!
   if (mode === 'subscribe' && token === VERIFY_TOKEN) {
-    console.log('✅ Webhook verified! Sending challenge:', challenge);
+    console.log('✅ WEBHOOK VERIFIED SUCCESSFULLY! 🎉');
+    console.log('   Sending challenge back to Meta...');
     res.status(200).type('text/plain').send(challenge);
   } else {
-    console.error('❌ Webhook verification failed');
-    console.error('   Mode match:', mode === 'subscribe');
-    console.error('   Token match:', token === VERIFY_TOKEN);
+    console.error('❌ WEBHOOK VERIFICATION FAILED!');
+    console.error('   Mode:', mode, 'Expected: subscribe', 'Match:', mode === 'subscribe');
+    console.error('   Token:', token, 'Expected:', VERIFY_TOKEN);
+    if (token !== VERIFY_TOKEN) {
+      console.error('   ⚠️  TOKEN MISMATCH!');
+      console.error('      Received length:', token?.length);
+      console.error('      Expected length:', VERIFY_TOKEN?.length);
+    }
     res.sendStatus(403);
   }
 });
