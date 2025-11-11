@@ -491,6 +491,9 @@ app.get('/webhook', (req, res) => {
 
 app.post('/webhook', async (req, res) => {
   try {
+    console.log('\n🔔 WEBHOOK POST REQUEST RECEIVED');
+    console.log('📦 Body:', JSON.stringify(req.body, null, 2));
+    
     // Quick 200 response to WhatsApp (they require this within 5 seconds)
     res.sendStatus(200);
 
@@ -498,6 +501,7 @@ app.post('/webhook', async (req, res) => {
 
     // Check if it's a WhatsApp message
     if (body.object !== 'whatsapp_business_account') {
+      console.log('⚠️  Not a WhatsApp message, object:', body.object);
       return;
     }
 
@@ -507,7 +511,13 @@ app.post('/webhook', async (req, res) => {
     const value = changes?.value;
     const messages = value?.messages;
 
+    console.log('📋 Entry:', entry ? 'Found' : 'Missing');
+    console.log('📋 Changes:', changes ? 'Found' : 'Missing');
+    console.log('📋 Value:', value ? 'Found' : 'Missing');
+    console.log('📋 Messages:', messages);
+
     if (!messages || messages.length === 0) {
+      console.log('⚠️  No messages in webhook payload');
       return;
     }
 
