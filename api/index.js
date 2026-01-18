@@ -197,8 +197,10 @@ async function processUserMessage(from, text) {
         // Send message FIRST
         await sendMessage(from, menuMsg);
 
-        // Then update DB
+        // Update DB with history and state
         try {
+            chat.messages.push({ role: 'user', content: text });
+            chat.messages.push({ role: 'assistant', content: menuMsg });
             chat.interactionState = 'AWAITING_LANGUAGE';
             await chat.save();
         } catch (err) {
@@ -319,11 +321,14 @@ async function processUserMessage(from, text) {
         };
 
         if (langMap[input]) {
+            const welcomeMsg = langMap[input].msg;
             // Send message FIRST
-            await sendMessage(from, langMap[input].msg);
+            await sendMessage(from, welcomeMsg);
 
-            // Then update DB
+            // Update DB with history and language
             try {
+                chat.messages.push({ role: 'user', content: text });
+                chat.messages.push({ role: 'assistant', content: welcomeMsg });
                 chat.language = langMap[input].code;
                 chat.interactionState = 'IDLE';
                 await chat.save();
@@ -331,14 +336,23 @@ async function processUserMessage(from, text) {
                 console.error('Language DB update failed, but message sent:', err.message);
             }
         } else {
-            await sendMessage(from, `Please reply with a number from 1 to 6.
+            const retryMsg = `Please reply with a number from 1 to 6.
 
 1️⃣ English
 2️⃣ Tamil (தமிழ்)
 3️⃣ Hindi (हिंदी)
 4️⃣ Malayalam (മലയാളം)
 5️⃣ Telugu (తెలుగు)
-6️⃣ Kannada (ಕನ್ನಡ)`);
+6️⃣ Kannada (ಕನ್ನಡ)`;
+            await sendMessage(from, retryMsg);
+
+            try {
+                chat.messages.push({ role: 'user', content: text });
+                chat.messages.push({ role: 'assistant', content: retryMsg });
+                await chat.save();
+            } catch (err) {
+                console.error('Language retry DB update failed:', err.message);
+            }
         }
         return; // Exit after language selection
     }
