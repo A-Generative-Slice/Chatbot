@@ -29,14 +29,15 @@ async function sync() {
 
         // 3. Map Products
         const mappedProducts = allWebsiteProducts.map(p => {
-            const productId = p._id || p.id || p.slug;
+            const productId = p._id || p.id;
+            const slug = p.slug || productId;
             return {
                 id: productId,
                 name: p.name || p.title,
                 mrp: p.price || p.mrp || 0,
                 category: (p.category && typeof p.category === 'object') ? p.category.name : (p.category || 'Cleaning Products'),
                 categoryKey: (p.category && typeof p.category === 'object') ? (p.category.slug || p.category._id) : (p.categoryKey || 'website'),
-                link: `https://rosechemicals.in/products/${productId}`,
+                link: `https://rosechemicals.in/products/${slug}`,
                 description: p.description || p.short_description || `${p.name} - Professional cleaning solution`,
                 source: 'website'
             };
