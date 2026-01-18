@@ -9,7 +9,27 @@ const { logInteraction, getAnalyticsSummary, logError } = require('../lib/analyt
 const Chat = require('../models/Chat');
 
 const app = express();
+const cors = require('cors');
+
+// Enable CORS for the website
+app.use(cors({
+    origin: ['https://rosechemicals.in', 'http://localhost:3000'],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key']
+}));
+
 app.use(bodyParser.json());
+
+// Middleware to protect admin routes
+const protectAdmin = (req, res, next) => {
+    const apiKey = req.headers['x-api-key'] || req.query.api_key;
+    const secret = process.env.ADMIN_API_KEY || 'RoseAdminSecret2025';
+
+    if (apiKey === secret) {
+        return next();
+    }
+    res.status(401).json({ error: 'Unauthorized: Invalid Admin API Key 🚫' });
+};
 
 // DEBUG: Log all requests to check Vercel routing
 app.use((req, res, next) => {
@@ -401,12 +421,29 @@ async function processUserMessage(from, text) {
     );
 }
 
-// Admin API to fetch chats
-app.get('/api/chats', async (req, res) => {
+// Admin API to fetch chats with pagination
+app.get('/api/chats', protectAdmin, async (req, res) => {
     try {
         await connectDB();
-        const chats = await Chat.find().sort({ lastUpdated: -1 });
-        res.json(chats);
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 20;
+        const skip = (page - 1) * limit;
+
+        const chats = await Chat.find()
+            .sort({ lastUpdated: -1 })
+            .skip(skip)
+            .limit(limit);
+
+        const total = await Chat.countDocuments();
+
+        res.json({
+            chats,
+            pagination: {
+                total,
+                page,
+                pages: Math.ceil(total / limit)
+            }
+        });
     } catch (error) {
         console.error('Error fetching chats:', error);
         res.status(500).json({ error: 'Internal Server Error' });
@@ -414,7 +451,7 @@ app.get('/api/chats', async (req, res) => {
 });
 
 // Analytics API
-app.get('/api/analytics', async (req, res) => {
+app.get('/api/analytics', protectAdmin, async (req, res) => {
     try {
         await connectDB();
         const days = parseInt(req.query.days) || 7;
