@@ -12,7 +12,12 @@ const app = express();
 const cors = require('cors');
 
 // Enable CORS for the website
-app.use(cors());
+app.use(cors({
+    origin: ['https://rosechemicals.in', 'http://localhost:3000', 'http://localhost:5173'],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'],
+    credentials: true
+}));
 
 app.use(bodyParser.json());
 
@@ -413,22 +418,23 @@ async function processUserMessage(from, text) {
 
 // Admin API to fetch chats with pagination
 app.get('/api/chats', protectAdmin, async (req, res) => {
-    console.log(`👤 Admin fetching chats: Page ${req.query.page || 1}`);
+    const { page = 1, limit = 20, phoneNumber, flat } = req.query;
+    console.log(`👤 Admin fetching chats: Page ${page}${phoneNumber ? ` for ${phoneNumber}` : ''}`);
     try {
         await connectDB();
-        const page = parseInt(req.query.page) || 1;
-        const limit = parseInt(req.query.limit) || 20;
-        const skip = (page - 1) * limit;
+        const skip = (parseInt(page) - 1) * parseInt(limit);
+        const query = phoneNumber ? { phoneNumber } : {};
 
-        const chats = await Chat.find()
+        const chats = await Chat.find(query)
             .sort({ lastUpdated: -1 })
             .skip(skip)
-            .limit(limit);
+            .limit(parseInt(limit));
 
-        const total = await Chat.countDocuments();
+        const total = await Chat.countDocuments(query);
         console.log(`📊 Found ${chats.length} active chats out of ${total} total.`);
+
         // COMPATIBILITY: return structure that works with most frontends
-        if (req.query.flat === 'true') {
+        if (flat === 'true') {
             return res.status(200).json(chats);
         }
 
