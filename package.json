@@ -4,7 +4,8 @@
     "description": "WhatsApp Bot with Sarvam AI integration",
     "main": "index.js",
     "scripts": {
-        "start": "node api/index.js"
+        "start": "node api/index.js",
+        "sync:products": "node scripts/sync_products.js"
     },
     "dependencies": {
         "axios": "^1.6.2",
