@@ -423,6 +423,7 @@ async function processUserMessage(from, text) {
 
 // Admin API to fetch chats with pagination
 app.get('/api/chats', protectAdmin, async (req, res) => {
+    console.log(`👤 Admin fetching chats: Page ${req.query.page || 1}`);
     try {
         await connectDB();
         const page = parseInt(req.query.page) || 1;
@@ -435,6 +436,7 @@ app.get('/api/chats', protectAdmin, async (req, res) => {
             .limit(limit);
 
         const total = await Chat.countDocuments();
+        console.log(`📊 Found ${chats.length} active chats out of ${total} total.`);
 
         res.json({
             chats,
@@ -445,7 +447,7 @@ app.get('/api/chats', protectAdmin, async (req, res) => {
             }
         });
     } catch (error) {
-        console.error('Error fetching chats:', error);
+        console.error('❌ Error fetching chats:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
