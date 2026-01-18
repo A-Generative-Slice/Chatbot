@@ -435,6 +435,10 @@ app.get('/api/chats', protectAdmin, async (req, res) => {
 
         const total = await Chat.countDocuments();
         console.log(`📊 Found ${chats.length} active chats out of ${total} total.`);
+        // COMPATIBILITY: return structure that works with most frontends
+        if (req.query.flat === 'true') {
+            return res.status(200).json(chats);
+        }
 
         res.status(200).json({
             success: true,
