@@ -12,22 +12,20 @@ const app = express();
 const cors = require('cors');
 
 // Enable CORS for the website
-app.use(cors({
-    origin: ['https://rosechemicals.in', 'http://localhost:3000'],
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key']
-}));
+app.use(cors());
 
 app.use(bodyParser.json());
 
 // Middleware to protect admin routes
 const protectAdmin = (req, res, next) => {
     const apiKey = req.headers['x-api-key'] || req.query.api_key;
+    console.log(`🔑 Admin Auth Attempt - Key: ${apiKey ? 'PROVIDED' : 'MISSING'}`);
     const secret = process.env.ADMIN_API_KEY || 'RoseAdminSecret2025';
 
     if (apiKey === secret) {
         return next();
     }
+    console.log('❌ Admin Auth Failed: Incorrect API Key');
     res.status(401).json({ error: 'Unauthorized: Invalid Admin API Key 🚫' });
 };
 
