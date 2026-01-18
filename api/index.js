@@ -436,12 +436,14 @@ app.get('/api/chats', protectAdmin, async (req, res) => {
         const total = await Chat.countDocuments();
         console.log(`📊 Found ${chats.length} active chats out of ${total} total.`);
 
-        res.json({
+        res.status(200).json({
+            success: true,
             chats,
             pagination: {
                 total,
                 page,
-                pages: Math.ceil(total / limit)
+                pages: Math.ceil(total / limit),
+                count: chats.length
             }
         });
     } catch (error) {
