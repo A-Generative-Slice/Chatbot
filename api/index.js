@@ -207,7 +207,8 @@ async function processUserMessage(from, text) {
 5️⃣ Telugu (తెలుగు)
 6️⃣ Kannada (ಕನ್ನಡ)
 
-*Reply with number (1-6)*`;
+*Reply with number (1-6)*
+💡 *Note: You can say 'hi' at any time to return to this menu.*`;
 
         // Send message FIRST
         await sendMessage(from, menuMsg);
