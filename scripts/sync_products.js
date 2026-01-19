@@ -52,8 +52,8 @@ async function sync() {
         const trainingItems = (existingData.products || []).filter(p => p.source === 'training_dataset');
         console.log(`📦 Preserving ${manualItems.length} manual and ${trainingItems.length} training items.`);
 
-        // 5. Merge and Save (Deduplicate by ID, prioritizing website version for basic info but keeping source: manual_list if already there)
-        const allMerged = [...mappedProducts, ...manualItems, ...trainingItems];
+        // 5. Merge and Save (PRIORITIZE manualItems and trainingItems over mappedProducts)
+        const allMerged = [...manualItems, ...trainingItems, ...mappedProducts];
         const uniqueProducts = [];
         const seenIds = new Set();
 
