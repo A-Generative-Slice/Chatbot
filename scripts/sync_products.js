@@ -48,15 +48,27 @@ async function sync() {
             existingData = JSON.parse(fs.readFileSync(PRODUCTS_FILE, 'utf8'));
         }
 
+        const manualItems = (existingData.products || []).filter(p => p.source === 'manual_list');
         const trainingItems = (existingData.products || []).filter(p => p.source === 'training_dataset');
-        console.log(`📦 Preserving ${trainingItems.length} training dataset items.`);
+        console.log(`📦 Preserving ${manualItems.length} manual and ${trainingItems.length} training items.`);
 
-        // 5. Merge and Save
+        // 5. Merge and Save (Deduplicate by ID, prioritizing website version for basic info but keeping source: manual_list if already there)
+        const allMerged = [...mappedProducts, ...manualItems, ...trainingItems];
+        const uniqueProducts = [];
+        const seenIds = new Set();
+
+        for (const p of allMerged) {
+            if (!seenIds.has(p.id)) {
+                uniqueProducts.push(p);
+                seenIds.add(p.id);
+            }
+        }
+
         const finalData = {
             lastUpdated: new Date().toISOString(),
-            productCount: mappedProducts.length + trainingItems.length,
+            productCount: uniqueProducts.length,
             categories: categories.map(c => ({ _id: c._id, name: c.name, slug: c.slug })),
-            products: [...mappedProducts, ...trainingItems]
+            products: uniqueProducts
         };
 
         fs.writeFileSync(PRODUCTS_FILE, JSON.stringify(finalData, null, 2));
