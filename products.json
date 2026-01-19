@@ -3146,10 +3146,10 @@
       "cost_per_liter": 55,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_fabric_conditioner_kit_1_20",
+      "id": "7a97250bb23b37d2e8d4da07",
       "description": "Complete DIY manufacturing kit for FABRIC CONDITIONER KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/7a97250bb23b37d2e8d4da07"
     },
     {
       "name": "LIQUID DETERGENT - ULTRA KIT 1:25",
@@ -3158,10 +3158,10 @@
       "cost_per_liter": 64,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_liquid_detergent___ultra_kit_1_25",
+      "id": "c9602ef6c1ffd4a6fbdbf88a",
       "description": "Complete DIY manufacturing kit for LIQUID DETERGENT - ULTRA KIT 1:25. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/c9602ef6c1ffd4a6fbdbf88a"
     },
     {
       "name": "LIQUID DETERGENT - SMART KIT 1:55",
@@ -3170,10 +3170,10 @@
       "cost_per_liter": 36,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_liquid_detergent___smart_kit_1_55",
+      "id": "6ba3aacad52874134ade1ad1",
       "description": "Complete DIY manufacturing kit for LIQUID DETERGENT - SMART KIT 1:55. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/6ba3aacad52874134ade1ad1"
     },
     {
       "name": "DISH WASH LIQUID - ULTRA KIT 1:20",
@@ -3182,10 +3182,10 @@
       "cost_per_liter": 60,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_dish_wash_liquid___ultra_kit_1_20",
+      "id": "474814ee1af820db56a53f58",
       "description": "Complete DIY manufacturing kit for DISH WASH LIQUID - ULTRA KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/474814ee1af820db56a53f58"
     },
     {
       "name": "DISH WASH LIQUID - SMART KIT 1:55",
@@ -3194,10 +3194,10 @@
       "cost_per_liter": 36,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_dish_wash_liquid___smart_kit_1_55",
+      "id": "b0171941a3f86bdb7d4e75f5",
       "description": "Complete DIY manufacturing kit for DISH WASH LIQUID - SMART KIT 1:55. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/b0171941a3f86bdb7d4e75f5"
     },
     {
       "name": "FLOOR CLEANER - ULTRA KIT 1:20",
@@ -3206,10 +3206,10 @@
       "cost_per_liter": 55,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_floor_cleaner___ultra_kit_1_20",
+      "id": "c4bb2d4e79fea527261f6c46",
       "description": "Complete DIY manufacturing kit for FLOOR CLEANER - ULTRA KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/c4bb2d4e79fea527261f6c46"
     },
     {
       "name": "FLOOR CLEANER - SMART KIT 1:55",
@@ -3218,10 +3218,10 @@
       "cost_per_liter": 36,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_floor_cleaner___smart_kit_1_55",
+      "id": "c693df22ddeb3f7f8dfb36d8",
       "description": "Complete DIY manufacturing kit for FLOOR CLEANER - SMART KIT 1:55. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/c693df22ddeb3f7f8dfb36d8"
     },
     {
       "name": "SOAP OIL KIT 1:50",
@@ -3230,10 +3230,10 @@
       "cost_per_liter": 14,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_soap_oil_kit_1_50",
+      "id": "bf364413a95d226111801803",
       "description": "Complete DIY manufacturing kit for SOAP OIL KIT 1:50. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/bf364413a95d226111801803"
     },
     {
       "name": "ROOM FRESHENER KIT 1:20",
@@ -3242,10 +3242,10 @@
       "cost_per_liter": 17.5,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_room_freshener_kit_1_20",
+      "id": "3a3fd9ac14caed773529ccf8",
       "description": "Complete DIY manufacturing kit for ROOM FRESHENER KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/3a3fd9ac14caed773529ccf8"
     },
     {
       "name": "PHENYL COMPOUND KIT 1:20",
@@ -3254,10 +3254,10 @@
       "cost_per_liter": 10,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_phenyl_compound_kit_1_20",
+      "id": "90c6a92ccf571534444fba41",
       "description": "Complete DIY manufacturing kit for PHENYL COMPOUND KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/90c6a92ccf571534444fba41"
     },
     {
       "name": "PHENYL COMPOUND KIT 1:30",
@@ -3266,10 +3266,10 @@
       "cost_per_liter": 10,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_phenyl_compound_kit_1_30",
+      "id": "5fda6f71ac1239706603b25c",
       "description": "Complete DIY manufacturing kit for PHENYL COMPOUND KIT 1:30. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/5fda6f71ac1239706603b25c"
     },
     {
       "name": "PHENYL COMPOUND KIT 1:50",
@@ -3278,10 +3278,10 @@
       "cost_per_liter": 8,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
-      "id": "kit_phenyl_compound_kit_1_50",
+      "id": "e7dcf02bf24cc1771b5f6386",
       "description": "Complete DIY manufacturing kit for PHENYL COMPOUND KIT 1:50. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in"
+      "link": "https://rosechemicals.in/products/e7dcf02bf24cc1771b5f6386"
     }
   ]
 }
