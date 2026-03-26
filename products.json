@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-01-18T22:21:47.678Z",
-  "productCount": 319,
+  "lastUpdated": "2026-03-26T12:00:00.000Z",
+  "productCount": 328,
   "categories": [
     {
       "_id": "694ac34223d6cfdee781c8e3",
@@ -3149,73 +3149,79 @@
       "id": "7a97250bb23b37d2e8d4da07",
       "description": "Complete DIY manufacturing kit for FABRIC CONDITIONER KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/7a97250bb23b37d2e8d4da07"
+      "link": "https://rosechemicals.in/products/7a97250bb23b37d2e8d4da07",
+      "videoLink": "https://youtu.be/Q4gyRMwbRBY?si=6F_O3po_3P-h6Mk_"
     },
     {
       "name": "LIQUID DETERGENT - ULTRA KIT 1:25",
-      "mrp": 1600,
+      "mrp": 2000,
       "yield": "25 Litres",
-      "cost_per_liter": 64,
+      "cost_per_liter": 80,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "c9602ef6c1ffd4a6fbdbf88a",
       "description": "Complete DIY manufacturing kit for LIQUID DETERGENT - ULTRA KIT 1:25. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/c9602ef6c1ffd4a6fbdbf88a"
+      "link": "https://rosechemicals.in/products/c9602ef6c1ffd4a6fbdbf88a",
+      "videoLink": "https://youtu.be/JuUq62z6iV8?si=BjgFFaNDwLT4Z84Z"
     },
     {
       "name": "LIQUID DETERGENT - SMART KIT 1:55",
-      "mrp": 2000,
+      "mrp": 2200,
       "yield": "55 Litres",
-      "cost_per_liter": 36,
+      "cost_per_liter": 40,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "6ba3aacad52874134ade1ad1",
       "description": "Complete DIY manufacturing kit for LIQUID DETERGENT - SMART KIT 1:55. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/6ba3aacad52874134ade1ad1"
+      "link": "https://rosechemicals.in/products/6ba3aacad52874134ade1ad1",
+      "videoLink": "https://youtu.be/FrTNEkBN0r8?si=OmbkklIjBFhVAcO3"
     },
     {
       "name": "DISH WASH LIQUID - ULTRA KIT 1:20",
-      "mrp": 1200,
+      "mrp": 1600,
       "yield": "20 Litres",
-      "cost_per_liter": 60,
+      "cost_per_liter": 80,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "474814ee1af820db56a53f58",
       "description": "Complete DIY manufacturing kit for DISH WASH LIQUID - ULTRA KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/474814ee1af820db56a53f58"
+      "link": "https://rosechemicals.in/products/474814ee1af820db56a53f58",
+      "videoLink": "https://youtu.be/pPmxwAn8QtQ?si=2gei0sc44MpNvRIJ"
     },
     {
       "name": "DISH WASH LIQUID - SMART KIT 1:55",
-      "mrp": 2000,
+      "mrp": 2200,
       "yield": "55 Litres",
-      "cost_per_liter": 36,
+      "cost_per_liter": 40,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "b0171941a3f86bdb7d4e75f5",
       "description": "Complete DIY manufacturing kit for DISH WASH LIQUID - SMART KIT 1:55. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/b0171941a3f86bdb7d4e75f5"
+      "link": "https://rosechemicals.in/products/b0171941a3f86bdb7d4e75f5",
+      "videoLink": "https://youtu.be/EmpZ5T-epr0?si=B6QcNGGb4BCPG36V"
     },
     {
       "name": "FLOOR CLEANER - ULTRA KIT 1:20",
-      "mrp": 1100,
+      "mrp": 1400,
       "yield": "20 Litres",
-      "cost_per_liter": 55,
+      "cost_per_liter": 70,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "c4bb2d4e79fea527261f6c46",
       "description": "Complete DIY manufacturing kit for FLOOR CLEANER - ULTRA KIT 1:20. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/c4bb2d4e79fea527261f6c46"
+      "link": "https://rosechemicals.in/products/c4bb2d4e79fea527261f6c46",
+      "videoLink": "https://youtu.be/bnvclNk4sO4?si=j8mq7-cjMMWh8_K2"
     },
     {
       "name": "FLOOR CLEANER - SMART KIT 1:55",
-      "mrp": 2000,
+      "mrp": 2200,
       "yield": "55 Litres",
-      "cost_per_liter": 36,
+      "cost_per_liter": 40,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "c693df22ddeb3f7f8dfb36d8",
@@ -3225,15 +3231,16 @@
     },
     {
       "name": "SOAP OIL KIT 1:50",
-      "mrp": 700,
+      "mrp": 1000,
       "yield": "50 Litres",
-      "cost_per_liter": 14,
+      "cost_per_liter": 20,
       "category": "DIY Kits",
       "categoryKey": "diy_kits",
       "id": "bf364413a95d226111801803",
       "description": "Complete DIY manufacturing kit for SOAP OIL KIT 1:50. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/bf364413a95d226111801803"
+      "link": "https://rosechemicals.in/products/bf364413a95d226111801803",
+      "videoLink": "https://youtube.com/shorts/iDQxG112M_Q?si=d8mlpcXGbnXojkei"
     },
     {
       "name": "ROOM FRESHENER KIT 1:20",
@@ -3281,7 +3288,100 @@
       "id": "e7dcf02bf24cc1771b5f6386",
       "description": "Complete DIY manufacturing kit for PHENYL COMPOUND KIT 1:50. Includes formulation, PDF guide, and video tutorial.",
       "source": "training_dataset",
-      "link": "https://rosechemicals.in/products/e7dcf02bf24cc1771b5f6386"
+      "link": "https://rosechemicals.in/products/e7dcf02bf24cc1771b5f6386",
+      "videoLink": "https://www.instagram.com/reel/DP5pDQwkQIn/?igsh=NHg3dXBsaGpscjZv"
+    },
+    {
+      "name": "HAND WASH LIQUID KIT 1:50",
+      "mrp": 2200,
+      "yield": "50 Litres",
+      "cost_per_liter": 44,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "f23b71d8ae7c4a1b8d2564c1",
+      "description": "Complete DIY manufacturing kit for HAND WASH LIQUID KIT 1:50. Includes formulation, PDF guide, and video tutorial.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/f23b71d8ae7c4a1b8d2564c1"
+    },
+    {
+      "name": "STAIN REMOVER 1 LTR",
+      "mrp": 60,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "f6a0d5ce4bb64724af8d916a",
+      "description": "Stain remover for tile and hard surface stain cleaning.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/f6a0d5ce4bb64724af8d916a"
+    },
+    {
+      "name": "TOILET CLEANER 1 LTR",
+      "mrp": 50,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "1d4c8eb8d3a74c708f6d217e",
+      "description": "Toilet cleaner concentrate for Harpic-like cleaning performance.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/1d4c8eb8d3a74c708f6d217e"
+    },
+    {
+      "name": "WASHING POWDER 1 KG",
+      "mrp": 50,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "9572e0e33f8f45d49068b19b",
+      "description": "Washing powder pack suitable for daily laundry use.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/9572e0e33f8f45d49068b19b"
+    },
+    {
+      "name": "AIR FRESHNER 12 PIECES",
+      "mrp": 240,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "cab47870f53d4a67a9fb3f22",
+      "description": "Air freshner combo pack containing 12 pieces.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/cab47870f53d4a67a9fb3f22"
+    },
+    {
+      "name": "BLEACHING POWDER 1 KG",
+      "mrp": 40,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "4c7ec14dc1d84f99b8a6eb73",
+      "description": "Bleaching powder for disinfection and whitening applications.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/4c7ec14dc1d84f99b8a6eb73"
+    },
+    {
+      "name": "GLASS CLEANER 100 ML 1:3",
+      "mrp": 100,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "d5f0190a3f9f4f6689cf1d7f",
+      "description": "Glass cleaner concentrate 100 ml with 1:3 dilution ratio.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/d5f0190a3f9f4f6689cf1d7f"
+    },
+    {
+      "name": "ROOM SPRAY 100 ML 1:3",
+      "mrp": 300,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "f4d78db1ce4a4395b00da874",
+      "description": "Room spray concentrate 100 ml with 1:3 dilution ratio.",
+      "source": "training_dataset",
+      "link": "https://rosechemicals.in/products/f4d78db1ce4a4395b00da874"
+    },
+    {
+      "name": "SOAP MAKING KIT",
+      "mrp": 2500,
+      "category": "DIY Kits",
+      "categoryKey": "diy_kits",
+      "id": "a18dca00fdf44fbdb5f9112e",
+      "description": "Complete soap making kit with formulation support and training resources.",
+      "source": "training_dataset",
+      "link": "https://youtu.be/7cG0dPFtr-0?si=rhT3ywEROk0VxjLf"
     }
   ]
 }
