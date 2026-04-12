@@ -8,6 +8,57 @@ const { detectIntent } = require('../lib/intentDetection');
 const { logInteraction, getAnalyticsSummary, logError } = require('../lib/analytics');
 const Chat = require('../models/Chat');
 
+// In-memory fallback session state used when DB is unavailable.
+const ephemeralSessions = new Map();
+
+const LANGUAGE_CHOICES = {
+    '1': { code: 'en-IN', name: 'English' },
+    '2': { code: 'ta-IN', name: 'Tamil' },
+    '3': { code: 'hi-IN', name: 'Hindi' },
+    '4': { code: 'ml-IN', name: 'Malayalam' },
+    '5': { code: 'te-IN', name: 'Telugu' },
+    '6': { code: 'kn-IN', name: 'Kannada' }
+};
+
+const LANGUAGE_ALIASES = {
+    english: '1',
+    en: '1',
+    tamil: '2',
+    hindi: '3',
+    malayalam: '4',
+    telugu: '5',
+    kannada: '6'
+};
+
+const normalizeInput = (value) => String(value || '').trim().toLowerCase();
+
+const getLanguageSelection = (input) => {
+    const normalized = normalizeInput(input);
+    const numericChoice = LANGUAGE_CHOICES[normalized];
+
+    if (numericChoice) {
+        return numericChoice;
+    }
+
+    const aliasChoice = LANGUAGE_ALIASES[normalized];
+    return aliasChoice ? LANGUAGE_CHOICES[aliasChoice] : null;
+};
+
+const hasRecentLanguageMenu = (chat) => {
+    if (!chat?.messages?.length) {
+        return false;
+    }
+
+    return chat.messages.slice(-4).some(message => {
+        if (message.role !== 'assistant' || !message.content) {
+            return false;
+        }
+
+        const content = message.content.toLowerCase();
+        return content.includes('please select your language') || content.includes('reply with number (1-6)');
+    });
+};
+
 const app = express();
 const cors = require('cors');
 
@@ -192,6 +243,18 @@ async function processUserMessage(from, text) {
     }
 
     const input = text.trim();
+    const languageSelection = getLanguageSelection(input);
+
+    // Rehydrate state from memory if DB state is missing/unavailable.
+    const fallbackState = ephemeralSessions.get(from);
+    if (fallbackState) {
+        if (chat.interactionState === 'IDLE' && fallbackState.interactionState) {
+            chat.interactionState = fallbackState.interactionState;
+        }
+        if (chat.language === 'en-IN' && fallbackState.language) {
+            chat.language = fallbackState.language;
+        }
+    }
 
     // Enhanced menu/reset commands
     if (input.toLowerCase().match(/^(hello|hi|hey|menu|start|restart|reset)$/)) {
@@ -222,11 +285,18 @@ async function processUserMessage(from, text) {
         } catch (err) {
             console.error('Based DB update failed, but message sent:', err.message);
         }
+
+        ephemeralSessions.set(from, {
+            interactionState: 'AWAITING_LANGUAGE',
+            language: chat.language || 'en-IN'
+        });
         return; // Exit early
     }
 
     // Enhanced language selection with better welcome messages
-    if (chat.interactionState === 'AWAITING_LANGUAGE') {
+    const awaitingLanguage = chat.interactionState === 'AWAITING_LANGUAGE' || fallbackState?.interactionState === 'AWAITING_LANGUAGE' || hasRecentLanguageMenu(chat);
+    if (languageSelection && awaitingLanguage) {
+        const selectedKey = LANGUAGE_ALIASES[normalizeInput(input)] || input;
         const langMap = {
             '1': {
                 code: 'en-IN',
@@ -336,8 +406,8 @@ async function processUserMessage(from, text) {
             }
         };
 
-        if (langMap[input]) {
-            const welcomeMsg = langMap[input].msg;
+        if (langMap[selectedKey]) {
+            const welcomeMsg = langMap[selectedKey].msg;
             // Send message FIRST
             await sendMessage(from, welcomeMsg);
 
@@ -345,12 +415,17 @@ async function processUserMessage(from, text) {
             try {
                 chat.messages.push({ role: 'user', content: text });
                 chat.messages.push({ role: 'assistant', content: welcomeMsg });
-                chat.language = langMap[input].code;
+                chat.language = langMap[selectedKey].code;
                 chat.interactionState = 'IDLE';
                 await chat.save();
             } catch (err) {
                 console.error('Language DB update failed, but message sent:', err.message);
             }
+
+            ephemeralSessions.set(from, {
+                interactionState: 'IDLE',
+                language: langMap[selectedKey].code
+            });
         } else {
             const retryMsg = `Please reply with a number from 1 to 6.
 
@@ -369,6 +444,11 @@ async function processUserMessage(from, text) {
             } catch (err) {
                 console.error('Language retry DB update failed:', err.message);
             }
+
+            ephemeralSessions.set(from, {
+                interactionState: 'AWAITING_LANGUAGE',
+                language: chat.language || 'en-IN'
+            });
         }
         return; // Exit after language selection
     }
@@ -400,6 +480,11 @@ async function processUserMessage(from, text) {
     chat.lastIntent = userIntent; // Track user intent
     chat.totalInteractions += 1; // Increment interaction count
     await chat.save();
+
+    ephemeralSessions.set(from, {
+        interactionState: chat.interactionState || 'IDLE',
+        language: chat.language || 'en-IN'
+    });
 
     const responseTime = Date.now() - startTime;
     console.log(`Response sent to ${from} in ${responseTime}ms for intent: ${userIntent}`);
