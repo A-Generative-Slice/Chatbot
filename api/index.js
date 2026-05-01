@@ -251,8 +251,10 @@ async function processUserMessage(from, text) {
         if (chat.interactionState === 'IDLE' && fallbackState.interactionState) {
             chat.interactionState = fallbackState.interactionState;
         }
-        if (chat.language === 'en-IN' && fallbackState.language) {
+        // ✅ Always use fallback language if DB language is still default
+        if ((chat.language === 'en-IN' || !chat.language) && fallbackState.language) {
             chat.language = fallbackState.language;
+            console.log(`🔄 Restored language from fallback: ${fallbackState.language}`);
         }
     }
 
@@ -408,6 +410,9 @@ async function processUserMessage(from, text) {
 
         if (langMap[selectedKey]) {
             const welcomeMsg = langMap[selectedKey].msg;
+            const selectedLangCode = langMap[selectedKey].code;
+            console.log(`✅ Language selected: ${langMap[selectedKey].name} (${selectedLangCode})`);
+            
             // Send message FIRST
             await sendMessage(from, welcomeMsg);
 
@@ -415,17 +420,19 @@ async function processUserMessage(from, text) {
             try {
                 chat.messages.push({ role: 'user', content: text });
                 chat.messages.push({ role: 'assistant', content: welcomeMsg });
-                chat.language = langMap[selectedKey].code;
+                chat.language = selectedLangCode;
                 chat.interactionState = 'IDLE';
                 await chat.save();
+                console.log(`📝 Saved to DB: language = ${chat.language}`);
             } catch (err) {
                 console.error('Language DB update failed, but message sent:', err.message);
             }
 
             ephemeralSessions.set(from, {
                 interactionState: 'IDLE',
-                language: langMap[selectedKey].code
+                language: selectedLangCode
             });
+            console.log(`💾 Saved to ephemeralSessions: language = ${selectedLangCode}`);
         } else {
             const retryMsg = `Please reply with a number from 1 to 6.
 
@@ -458,12 +465,14 @@ async function processUserMessage(from, text) {
 
     // Detect user intent for better processing
     const userIntent = detectIntent(text);
-    console.log(`Intent detected: ${userIntent} for message from ${from}: "${text}"`);
+    console.log(`🔍 Intent detected: ${userIntent} for message from ${from}: "${text}"`);
+    console.log(`🌍 Current Language Setting: ${chat.language} (${chat.language === 'en-IN' ? 'English' : 'Non-English'})`);
 
     // Save user message
     chat.messages.push({ role: 'user', content: text });
 
     // Generate enhanced AI response with full context
+    console.log(`📤 Calling generateResponse with language: ${chat.language}`);
     const aiResponse = await generateResponse(
         text,
         chat.language,
